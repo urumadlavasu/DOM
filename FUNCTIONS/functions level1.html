@@ -1,0 +1,253 @@
+<html>
+    <head>
+        <title>
+            functions level1
+        </title>
+    </head>
+    <body>
+        <script>
+        //   1Q.  Write a function which can return the sum of two numbers.
+
+            // function add(a,b){
+            //     return a+b ;
+            // };
+            
+            // var sum = add(45,67);
+            // console.log(sum);
+
+        //    2Q. Write a function which can return the greatest of the three numbers passed in arguments.
+
+                // function compare(a,b,c){
+                //     if((a>b) &&(a>c)){
+                //         return a;
+                //     }
+                //     else if(b>c){
+                //        return b;
+                //     }
+                //      else{
+                //         return c;
+                //      }   
+                     
+                // };
+
+                // var greatest = compare(45,67,23);
+                // console.log(greatest)
+
+            //    3Q. Write a function which can print the given arguments in ascending order.
+                        //     function sortNums(a,b,c){
+                        //         if(a<b && a<c){
+                        //                    if(b<c)
+                        //                    return([a,b,c])
+                        //                    else
+                        //                    return([a,c,b])
+                        //                      }
+
+                        // else
+                        // {
+                        //     if(b<c && b<a)
+                        //     {
+                        //         if(a<c)
+                        //             return([b,a,c])
+                        //         else 
+                        //         return([b,c,a])
+                        //     }
+                        //     else{
+                        //         if(c<b && c<a){
+                        //             if(a<b)
+                        //             return([c,a,b])
+                        //             else
+                        //             return([c,b,a])
+                        //         }
+                        //     }
+                        // }
+
+                        //            }
+
+                        //            var ascending = sortNums(3,10,2);
+                        //            console.log(ascending)
+
+
+                    //    4Q. Write a function which can return the factorial of a number.
+
+                        //  function fact(a){
+                        //     var f = 1;
+                        //     for(var i=1 ; i<=a ; i++){
+                        //         f = f*i
+                        //     }
+                        //     return f
+                        //  };
+                        //   var factorial = fact(4);
+                        //   console.log(factorial);
+
+                    //  5Q   Write a function which can to return the reverse of a given number.
+
+                    // function rev(a){
+                    //                     var c=0;
+                    //                     for(a;a>0;a){
+                    //                         var b = a%10;
+                    //                         a = parseInt(a/10);
+                    //                         c = c*10+b;
+                    //                     }
+                    //                     return c
+
+
+                    //                 };
+                     
+                    //                     var reverse = rev(1234);
+                    //                     console.log(reverse);
+
+
+
+                //  6Q.   Write a function which can check a given number is prime number or not
+
+                
+                // function prime(a){
+                //     var count = 0;
+                //     for(var i = 0 ; i<=a; i++){
+                //         if(a%i===0){
+                //             count++
+                //         }
+                //     }
+                //     if(count<=2)
+                //     {
+                //         return "primenumber";
+                //     }
+                //     else{
+                //         return "not a prime number"
+                //     }
+                // }
+
+                // var prime = prime(+prompt());
+                // console.log(prime)
+
+            //   7Q.  Write a function which can check a given number is palindrome or not
+
+                //  function palindrome(num){
+                //     var temp = num;
+                //     var sum = 0;
+                //     for(num;num>0;num){
+                //         var rem = num%10;
+                //         sum = sum*10 +rem;
+                //         num=parseInt(num/10)
+                //     }
+                //     if(temp===sum){
+                //         return "palindrome";
+                //     }else{
+                //         return "not a palindrome"
+                //     }
+                //  }
+                //     var res = palindrome(12321);
+                //     console.log(res)
+
+            //  8Q.   Write a function to return the number of digits in the given number
+                    // function digit(num){
+                    //     var temp = num;
+                    //     var count =0;
+                    //     for(num;num>0;num){
+                    //          digit=num%10;
+                    //         num = parseInt(num/10);
+                    //          count++;
+                    //     }
+                    //     return count++
+                    // };
+                    // var res = digit(1236);
+                    // console.log(res)
+
+                // 9Q.    Write a function that prints all even numbers between 1 and 20.
+
+                // function even(a){
+                //     var temp = a;
+                //     for(var i = 1 ; i<=a; i++){
+                //         if(i%2===0){
+                //             var c=i
+                //             console.log(c)
+                //         }
+                //     }
+                // };
+                // var even = even(20);
+                
+            //   10Q  Write a function which can add two numbers
+                    // function add(a,b){
+                    //     return a+b;
+                    // };
+                    // var add = add(12,13);
+                    // console.log(add)
+//                 
+
+                //   11Q.Write a function which can display the greatest of the three numbers passed in arguments.
+
+                // function greatest(a,b,c){
+                //     if((a>b) &&( a>c)){
+                //         return a;
+                //     }
+                //     else if(b>c){
+                //         return b;
+                //     } 
+                //     else{
+                //         return c ;
+                //     }
+                   
+                // };
+                // var res = greatest(3,4,8);
+                // console.log(res)
+
+            //    12Q. Write a function which can display the given arguments in ascending order
+
+// function sortNums(a,b,c){
+
+// if(a<b&& a<c)
+//         {    
+//                     if(b<c)
+//                     return([a,b,c])
+//                     else
+//                     return([a,c,b])
+//         } 
+// else
+// {
+//     if(b<c && b<a)
+//     {
+//         if(a<c)
+//             return([b,a,c])
+//         else
+//         return([b,c,a])
+//     }
+//     else{
+//         if(c<b && c<a){
+//             if(a<b)
+//             return([c,a,b])
+//             else
+//             return([c,b,a])
+//         }
+//     }
+// }
+//                             }
+//                             var ascending = sortNums(7,2,18);
+//                             document.write(ascending);
+
+
+//   13Q.Write a function which can display the factorial of a number
+
+        // function fact(a){
+        //     var f = 1;
+        //     for(var i = 1; i<=a; i++){
+        //        f= f*i;
+        //     }
+        //     return f
+        // };
+        // var res = fact(5);
+        // console.log(res)
+
+    //   14Q.Write a function which can to display the reverse of a given number
+
+    function reverse(num){
+        var temp = num;
+        sum =0;
+        for()
+
+    }
+
+       
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+        
+    </head>
+    <body>
+        <button id="btn" class="onoff" onclick="onoff()">On</button>
+
+        <script>
+              var btn = document.getElementById('btn');
+              btn.style.padding = '15px';
+              btn.style.fontSize = '18px';
+
+              function onoff(){
+                if(btn.innerHTML === 'Off'){
+                    btn.innerHTML = 'On'
+                }else{
+                    btn.innerHTML = 'Off'
+                }
+
+              }
+              
+        </script>
+    </body>
+</html>

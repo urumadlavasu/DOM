@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="box">
+
+        </div>
+          <button id="tfBtn" onclick="trueFalse()">True/False</button>
+        <script>
+            var box = document.getElementById('box');
+            var tfBtn = document.getElementById('tfBtn');
+            
+            tfBtn.style.padding = '10px';
+            tfBtn.style.fontSize = '18px';
+
+            box.innerHTML = 'Im nothing';
+            box.style.fontSize = '42px';
+            box.style.fontWeight = 'bold';
+            box.style.height = '150px';
+            box.style.width = '300px';
+            box.style.padding = '20px';
+            box.style.marginBottom = '15px';
+            box.style.border = '3px solid black';
+
+            function trueFalse(){
+                if(box.innerHTML === 'true'){
+                    box.innerHTML = 'false'
+                }else{
+                    box.innerHTML = 'true'
+                }
+            }
+
+        </script>
+    </body>
+</html>

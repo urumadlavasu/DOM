@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+           function Abc(){
+           var [num1,setNum1]=React.useState("")
+           var[num2,setNum2]=React.useState("")
+           var[result,setResult]=React.useState("")
+           function handleAdd(){
+            setResult(num1+num2)
+           }
+            return(
+                <div>
+                   <input type="text" value={num1} onChange={(e)=>setNum1(+e.target.value)}/> <br/>
+                   <input type="text" value={num2} onChange={(e)=>setNum2(+e.target.value)}/> <br/>
+                   <button onClick={handleAdd}>Add</button>
+                   <h1>{result}</h1>
+                </div>
+            )
+           }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>5Q</title>
+    </head>
+    <body>
+        <table id = "tb">
+
+        </table>
+        <script>
+            // 1Q. Create one h1 element and put some text into it.
+
+            // var x = document.createElement("h1")
+            // x.innerHTML="Hello DOM World!"
+            // document.body.appendChild(x)
+           
+        // 2Q. Create one h1 element,put some text into it and apply red font color to it.
+
+        // var x = document.createElement("h1")
+        //     x.innerHTML = "Hello DOM World!"
+        //     document.body.appendChild(x)
+        //     x.style.color = "red"
+
+    //    3Q. Take an array of names and create a list from it
+
+        //     var ar = ["vasu","bharghav","srinath","teja"]
+        //   ar.forEach(function(names){
+        //     var x = document.createElement("ul")
+        //     var nli = document.createElement("li")
+        //     nli.innerHTML=names
+        //     x.appendChild(nli)
+        //     document.body.appendChild(x)
+        //   })   
+ 
+        // 4Q.Take an array of numbers and create a list from it
+         
+        // var ar = ["1","2","3","4","5"]
+
+        // ar.forEach(function(num){
+        //     var x = document.createElement("ul")
+        //     var nli = document.createElement("li")
+        //     nli.innerHTML = num
+        //     x.appendChild(nli)
+        //     document.body.appendChild(x)
+        // })
+
+    //   5Q.  Take an array of objects and create a table form it
+
+            var details = [ {
+                Name : "praveen",
+                 age : 36 ,
+              gender : "male",
+              salary : 10000,
+                city : "hyd",
+            },
+            {
+                Name : "srikanth",
+                 age : 32,
+              gender :" male",
+              salary : 20000,
+                city : "banglore",
+            },
+            {
+                Name :"pradeep",
+                 age : 21,
+              gender : "male",
+              salary : 25000,
+                city : "hyd",
+            },
+            {
+                Name : "mounika",
+                 age : 20 ,
+              gender : "female",
+              salary : 30000,
+                city : "nalgonda",
+            },
+            {
+                Name : "nikhil",
+                 age : 22,
+              gender : "male",
+              salary : 2000, 
+                city : "guntur",
+            },
+            {
+                Name : "riya",
+                 age : 14,
+              gender : "female",
+              salary : 4000,
+                city : "indore",
+            },
+            ]
+           
+          var tableElement = document.createElement("table");
+          tableElement.setAttribute('border',1);
+          tableElement.setAttribute("cellpadding",2);
+
+          var thead = document.createElement("tr");
+
+            var th1 = document.createElement("th");
+            th1.innerHTML = "Name";
+            var th2 = document.createElement("th");
+            th2.innerHTML = "age";
+            var th3 = document.createElement("th")
+            th3.innerHTML = "gender";
+            var th4 = document.createElement("th")
+            th4.innerHTML = "salary";
+            var th5 = document.createElement("th");
+            th5.innerHTML = "city";
+            
+            thead.appendChild(th1);
+            thead.appendChild(th2);
+            thead.appendChild(th3);
+            thead.appendChild(th4);
+            thead.appendChild(th5);
+
+            tableElement.appendChild(thead);
+            document.body.appendChild(tableElement);
+
+           
+            details.forEach(function(person){
+                var trow = document.createElement("tr")
+
+                var td1 = document.createElement("td")
+                td1.innerHTML = person.Name;
+                var td2 = document.createElement('td')
+                td2.innerHTML = person.age;
+                var td3 = document.createElement("td");
+                td3.innerHTML = person.gender;
+                var td4 = document.createElement("td");
+                td4.innerHTML = person.city;
+                var td5 = document.createElement("td");
+                td5.innerHTML = person.salary;
+
+                trow.appendChild(td1);
+                trow.appendChild(td2);
+                trow.appendChild(td3);
+                trow.appendChild(td4);
+                trow.appendChild(td5);
+
+                tableElement.appendChild(trow);
+            })
+
+
+
+            
+
+
+
+
+
+            
+              
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <title>formd delete</title>
+    </head>
+    <body>
+        <form action="" id="fmid">
+            <input type="text" id="fname" placeholder="firstname"> <br>
+            <input type="text" id="lname" placeholder="lastname"> <br>
+            <input type="text" id="age" placeholder="age"> <br>
+            
+            
+            <button id="submit1" onclick="addstudent(event)">submit</button>
+            <button id = "update1" onclick="addupdate(event)">update</button>
+            
+        </form>
+
+        <div id="divid">
+            <button onclick="sortbtn1()">A-Z</button>
+            <button onclick="sortbtn2()">Z-A</button>
+            <button onclick="sortbtn3()">0-100</button>
+            <button onclick="sortbtn4()">100-0</button>
+
+        </div>
+
+        <table>
+            <thead>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+                <th>actions</th>
+            </thead>
+            <tbody id="tb">
+
+            </tbody>
+        </table>
+
+        <script>
+            
+            document.getElementById("update1").style.display="none"
+            var index;
+
+            var students = [];
+            var selectedGender= null
+            function setGender(e){
+                selectedGender=e.target.value;
+                
+            }
+            function addstudent(e){
+                e.preventDefault();
+                var ar ={
+                    firstname:"",
+                    lastname:"",
+                    age:"",
+                    delete:"",
+                }
+
+            ar.firstname = document.getElementById("fname").value
+            ar.lastname = document.getElementById("lname").value
+            ar.age = document.getElementById("age").value
+            
+                students.push(ar);
+                genTable();
+                console.log(students)
+            }
+
+            function genTable(){
+                document.getElementById("tb").innerHTML="";
+
+                students.forEach(function(a,i){
+                    var ntr = document.createElement("tr");
+
+                    var ftd = document.createElement("td")
+                    ftd.innerHTML= a.firstname;
+                    ntr.appendChild(ftd)
+                    var ltd = document.createElement("td")
+                    ltd.innerHTML= a.lastname;
+                    ntr.appendChild(ltd)
+
+                    var atd = document.createElement("td")
+                    atd.innerHTML= a.age;
+                    ntr.appendChild(atd)
+
+                    var btd= document.createElement("td")
+                    var btn=document.createElement("button")
+                     btn.innerHTML="delete";
+                     btd.appendChild(btn);
+                     ntr.appendChild(btd)
+
+                     var etd = document.createElement("td")
+                     var btn1 = document.createElement("button")
+                     btn1.innerHTML="Edit";
+                     etd.appendChild(btn1);
+                     ntr.appendChild(etd);
+
+
+                    document.getElementById("tb").appendChild(ntr)
+
+                    btn.onclick= function(){
+                        students.splice(i,1)
+                        genTable()
+
+                    }
+                    btn1.onclick= function(){
+                        fname.value=a.firstname
+                        lname.value=a.lastname
+                        age.value=a.age
+                        index=i
+                        
+
+                        submit1.style.display="none" 
+                        update1.style.display="block"
+
+                        genTable()
+                    }
+                    }) 
+                }
+                    function addupdate(c){
+                        c.preventDefault();
+                        var ar ={
+                            firstname:"",
+                            lastname:"",
+                            age:"",
+                            delete:"",
+                          }
+
+                        ar.firstname=document.getElementById("fname").value
+                        ar.lastname=document.getElementById("lname").value
+                        ar.age=document.getElementById("age").value
+
+                        students[index]=ar
+                        genTable();
+
+                        document.getElementById("fname").value=""
+                        document.getElementById("lname").value=""
+                        document.getElementById("age").value=""
+
+                    }
+                    
+                    // var sortbtn = document.createElement("button")
+                    // sortbtn.innerHTML="sort"
+                    // document.getElementById("divid").appendChild(sortbtn)
+                     function sortbtn1(){
+                    students.sort(function(a,b){
+                        if(a.firstname>b.firstname){
+                            return 1
+                        }
+                        if(a.firstname<b.firstname){
+                            return -1
+                        }
+                        return 0
+                        
+                       
+                     });
+                     genTable();
+                    }
+
+                    function sortbtn2(){
+                        students.sort(function(a,b){
+                            if(a.firstname<b.firstname){
+                                return 1
+                            }
+                            if(a.firstname>b.firstname){
+                                return -1
+                            }
+                            return 0
+                        })
+                        genTable();
+                    }
+
+                    function sortbtn3(){
+                        students.sort(function(a,b){
+                            if(a.age>b.age){
+                                return 1
+                            }
+                            if(a.age<b.age){
+                                return -1
+                            }
+                            return 0
+                        })
+                        genTable();
+                    }
+
+                    function sortbtn4(){
+                        students.sort(function(a,b){
+                            if(a.age<b.age){
+                                return 1
+                            }
+                            if(a.age>b.age){
+                                return -1
+                            }
+                            return 0
+                        })
+                        genTable();
+                    }
+
+
+               
+          
+
+            
+            
+
+            
+
+           
+
+        </script>
+        
+    </body>
+</html>

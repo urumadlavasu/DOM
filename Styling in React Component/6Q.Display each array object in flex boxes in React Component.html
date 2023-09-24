@@ -1,0 +1,68 @@
+<html>
+    <head>
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            const Abc= function(){
+            var [a,setA]=React.useState([
+            {
+                    firstname: "Praveen",
+                    lastname: "Gubbala",
+                    age: 40,
+                    gender: "male"
+                },
+                {
+                    firstname: "Smrithi",
+                    lastname: "mandana",
+                    age: 25,
+                    gender: 'female'
+                },
+                {
+                    firstname: "mithali",
+                    lastname: "raj",
+                    age: 39,
+                    gender: 'female'
+                },
+                {
+                    firstname: "Rohit",
+                    lastname: "Sharma",
+                    age: 35,
+                    gender: 'male'
+                },
+                {
+                    firstname: "Sachin",
+                    lastname: "Tendulkar",
+                    age: 50,
+                    gender: 'male'
+                },
+            ])
+                return(
+                        <div style={{display:"flex",flexWrap:"wrap"}}>{
+                            a.map((k)=>{
+                                return(
+                                    <div style={{border:"1px solid",padding:"20px",margin:"20px"}}>
+                                     <div style={k.gender==="male" ? {backgroundColor:"lightblue"}:{backgroundColor:"lightpink"}}>
+                                        <h1>Firstname:{k.firstname}</h1>
+                                        <h1>lastname:{k.lastname}</h1>
+                                        <h1>Age:{k.age}</h1>
+                                        <h1>Gender:{k.gender}</h1>
+                                            </div>
+                                        
+                                        </div>
+                                )
+                            })
+                        }
+                            </div>
+                )
+                    
+                
+            }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

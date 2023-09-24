@@ -1,0 +1,65 @@
+<html>
+    <head>
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style ></style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            const Abc= function(){
+            var [a,setA]=React.useState([
+                {
+                    firstname:"Praveen",
+                    lastname:"gubbala",
+                    gender:"male",
+                    age:"40",
+                },
+                {
+                    firstname:"alekya",
+                    lastname:"gubbala",
+                    gender:"female",
+                    age:"23",
+                },
+                {
+                    firstname:"sachin",
+                    lastname:"tendulkar",
+                    gender:"male",
+                    age:"50",
+                },
+                {
+                    firstname:"Niharika",
+                    lastname:"urumadla",
+                    gender:"female",
+                    age:"21",
+                }
+            ])
+            
+                return(
+                        <div>
+                            <table border="1px solid" >
+                                {
+                                    a.map((k)=>{
+                                        return(
+                                                <tr style={k.gender==="female"?{backgroundColor:"lightpink"}:null}>
+                                                    <td>{k.firstname}</td>
+                                                    <td>{k.lastname}</td>
+                                                    <td>{k.gender}</td>
+                                                    <td>{k.age}</td>
+                                                </tr>
+                                        )
+                                    })
+                                }
+                            </table>
+                        
+                        </div>
+                )
+                    
+                
+            }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

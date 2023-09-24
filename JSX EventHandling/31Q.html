@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar = [
+            {
+          firstname:"Praveen",
+          lastname:"Gubbala",
+          age:40,
+          gender:'male'
+        },
+        {
+          firstname:"Smrithi",
+          lastname:"mandana",
+          age:25,
+          gender:'female'
+        },
+        {
+          firstname:"mithali",
+          lastname:"raj",
+          age:39,
+          gender:'female'
+        },
+        {
+          firstname:"Rohit",
+          lastname:"Sharma",
+          age:35,
+          gender:'male'
+        },
+        {
+          firstname:"Sachin",
+          lastname:"Tendulkar",
+          age:50,
+          gender:'male'
+        },
+            ]
+
+            function abc(m){
+                document.getElementById("dh1").innerHTML=m.firstname
+                document.getElementById("dh2").innerHTML=m.lastname
+                document.getElementById("dh3").innerHTML=m.age
+                document.getElementById("dh4").innerHTML=m.gender
+            }
+            var jh1 = <div><ul>{
+                ar.map((a,i)=>{
+                    return <li onClick={()=>{abc(a,i)}}>{a.firstname}</li>
+                })
+            }</ul> <br/>
+            <h1 id="dh1"></h1> 
+            <h2 id="dh2"></h2>
+            <h2 id="dh3"></h2>
+            <h2 id="dh4"></h2>
+                </div>
+            ReactDOM.render(jh1,document.getElementById("d1"))
+            
+        </script>
+        
+        
+    </body>
+</html>

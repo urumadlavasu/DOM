@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            display image
+        </title>
+
+        <body>
+            <div style="text-align: center;">
+                <h1>Show images using URL</h1>
+                Enter image URL :<input type="text" id="show"> <br> <br>
+                <button onclick="img()">Add image</button>
+            </div>
+            <div id = "d1"></div>
+        </body>
+
+        <script>
+            var y = document.getElementById("show")
+            var b = document.getElementById("d1")
+            var ar = [];
+            function img(){
+                // console.log(y.value)
+                ar.push(y.value)
+                imagelist()
+                console.log(ar)
+            }
+            function imagelist(){
+                b.innerHTML=""
+                
+                ar.forEach(function(a){
+                    var z = document.createElement("img");
+                    z.style.width="100px";
+                    z.style.height="100px";
+                    z.src = a
+                    document.getElementById("d1").appendChild(z);
+                })
+            }
+
+            
+
+
+        </script>
+
+    </head>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+        <style>
+            .box{
+                background-color: yellow;
+
+            }
+            .box1{
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center">
+            <h1 style="color: red">Change background color using toggle button</h1>
+            <div id='box' class="box box1" style="height: 100px; width: 100px; border: 1px solid red; margin: 15px auto"></div>
+            <button style="border:1px solid red; background-color: orange"  class="btn" onclick="onoff()">Toggle</button>
+     </div>
+
+        <script>
+              var box = document.getElementById('box');
+
+              function onoff(){
+                 box.classList.toggle('box1');
+              }
+        </script>
+    </body>
+</html>

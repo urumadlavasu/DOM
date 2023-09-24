@@ -1,0 +1,113 @@
+ <html>
+    <head>
+
+    </head>
+    <body>
+        <form action="">
+            Firstname : <input type="text" id="fname" placeholder="firstname"> <br>
+            Lastname :<input type="text" id="lname" placeholder="lastname"> <br>
+            Age :<input type="text" id="age" placeholder="Age"> <br>
+
+            <label>Gender</label>
+            <input type="radio"  name="gen" value="male" onchange="setGender(event)">:Male;
+            <input type="radio"  name="gen" value="female" onchange="setGender(event)">:Female;
+            <input type="radio"  name="gen" value="others"  onchange="setGender(event)">:Others; <br>
+
+            <input type="checkbox" value="rjs" onchange="setTechs(event)">:Reactjs;
+            <input type="checkbox" value="ajs" onchange="setTechs(event)">:Angularjs;
+            <input type="checkbox" value="njs" onchange="setTechs(event)">:Nodejs;
+            <input type="checkbox" value="html" onchange="setTechs(event)">:HTML;
+            <br>
+            <button onclick="addstudent(event)">Add</button>
+        </form>
+
+        
+        <table border="1px" cellspacing='0'; cellpadding="2px" >
+            <thead>
+                <th>Firstname</th>
+                <th>lastname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>techs</th>
+                
+            </thead>
+            <tbody id="std">
+
+            </tbody>
+
+        </table>
+        
+        <script>
+
+            var students= [];
+            var selectedGender=null;
+            function setGender(e){
+                selectedGender=e.target.value;
+            }
+
+            var selectedTechs = [];
+            function setTechs(e){
+              if(e.target.checked===true){
+                selectedTechs.push(e.target.value)
+              } 
+              else{
+                var i = selectedTechs.indexOf(e.target.value);
+                selectedTechs.splice(i,1)
+              } 
+            }
+
+
+            function addstudent(ev){
+                ev.preventDefault();
+               var student={
+                    firstname : "",
+                    lastname : "",
+                    age : "",
+                    gender:"",
+                    techs:[]
+                    
+                }
+                student.firstname=document.getElementById("fname").value;
+                student.lastname=document.getElementById("lname").value;
+                student.age=document.getElementById("age").value;
+                student.gender=selectedGender;
+                student.techs=student.techs.concat(selectedTechs)
+                students.push(student);
+                genTable();
+                console.log(students)
+            }
+
+            function genTable(){
+                document.getElementById("std").innerHTML=""
+
+                students.forEach(function(student){
+                    var ntr = document.createElement("tr");
+
+                    var ftd = document.createElement("td");
+                    ftd.innerHTML=student.firstname;
+                    ntr.appendChild(ftd);
+
+                    var ltd = document.createElement("td");
+                    ltd.innerHTML=student.lastname;
+                    ntr.appendChild(ltd);
+
+                    var atd = document.createElement("td");
+                    atd.innerHTML=student.age;
+                    ntr.appendChild(atd);
+                    var gtd = document.createElement("td");
+                    gtd.innerHTML=student.gender;
+                    ntr.appendChild(gtd);
+                    var ttd = document.createElement("td");
+                    ttd.innerHTML=student.techs;
+                    ntr.appendChild(ttd);
+
+                    document.getElementById("std").appendChild(ntr)
+                })
+            }
+
+        </script>
+
+    </body>
+</html> 
+
+

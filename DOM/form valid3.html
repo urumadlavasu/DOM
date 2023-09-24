@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>formvalid3</title>
+        <style>
+            .abc{
+                display:none
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <form name="studentform" onsubmit="save(event)">
+            <input type="text" name="firstname" placeholder="firstname" required onblur="checkValidity1(event)">
+            <div class="abc">Please enter the above field</div> <br>
+            <input type="text" name="lastname" placeholder="lastname">
+            <br>
+            <input type="text" name="age" placeholder="age">
+            <br>
+            <button>save</button>
+        </form>
+
+        <script>
+           
+            function save(ev){
+                ev.preventDefault()
+                console.log(document)
+            }
+                   
+                function checkValidity1(e){
+                    if(!e.target.validity.valid){
+                        e.target.style.border = "2px solid red"
+                        e.target.nextElementSibling.style.display= "block"
+                    }
+                    else{
+                        e.target.style.border = "2px solid black"
+                        e.target.nextElementSibling.style.display= "none"
+                    }
+
+                    
+                }
+
+
+        </script>
+        
+
+    </body>
+</html>

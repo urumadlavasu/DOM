@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>49Q. a student details align with gender image </title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        
+        var students =[ {
+            firstname:"praveen",
+            lastname:"gubbala",
+            gender:"male",
+            age:"36",
+        },
+        {
+            firstname:"sachin",
+            lastname:"gubbala",
+            gender:"male",
+
+            age:"21",
+        },
+        {
+            firstname:"sravya",
+            lastname:"gubbala",
+            gender:"female",
+
+            age:"98",
+        },
+
+    ]
+
+    var maleimage = "https://w7.pngwing.com/pngs/159/935/png-transparent-male-toilet-public-bathroom-restroom-symbol-men-boy-sign.png"
+    var femaleimage="https://www.freeiconspng.com/uploads/female-icon-6.png"
+    var jh1 = <div>
+        <table>{
+            students.map((a)=>{
+                return <tr>
+                    <td>{a.firstname}</td>
+                    <td>{a.lastname}</td>
+                    <td>{a.age}</td>
+                    <td><img src={a.gender==="male" ? maleimage:femaleimage} width="100px"/></td>
+                    </tr>
+            })
+        }
+            </table></div>
+            ReactDOM.render(jh1,document.getElementById("d1"))
+
+    

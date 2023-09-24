@@ -1,0 +1,482 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        //1) add function
+           /* function add(a,b){
+                return a+b
+            }
+            console.log(add(45,67))*/
+//2)greatest of 3
+/*function compare(a,b,c){
+                        if(a>b&&a>c)
+                            return a
+                        if(b>a&&b>c)
+                            return b
+                        else
+                            return c
+                            }
+                            var greatest = compare(45,23,46);
+                            console.log(greatest);*/
+//3)ascending Order
+/*function sortNums(a,b,c){
+
+if(a<b&& a<c)
+        {    
+                    if(b<c)
+                    return([a,b,c])
+                    else
+                    return([a,c,b])
+        } 
+else
+{
+    if(b<c && b<a)
+    {
+        if(a<c)
+            return([b,a,c])
+        else
+        return([b,c,a])
+    }
+    else{
+        if(c<b && c<a){
+            if(a<b)
+            return([c,a,b])
+            else
+            return([c,b,a])
+        }
+    }
+}
+                            }
+                            var ascending = sortNums(3,10,2);
+                            console.log(ascending);
+/
+//4)Reverse of a number
+/*function rev(a){
+                            var c=0;
+                            for(a;a>0;a){
+                            var b=a%10
+                            a=parseInt(a/10)
+                            c=c*10+b
+                            }
+                            return c
+                }
+                            var reverse = rev(4125);
+                            console.log(reverse);*/
+//5)Write a function which can return the factorial of a number.
+/*function fact(a){
+    var fact=1
+    for(var i=1;i<=a;i++){
+        fact=fact*i
+    }
+    return fact
+    }
+    var factorial = fact(5);
+    console.log(factorial);*/
+//6)Write a function which can check a given number is prime number or not
+    /*function check(a){
+        var count=0
+        for(var i=0;i<=a;i++)
+        {
+            if(a%i===0)
+            {
+                count++
+            }
+        }
+        if(count<=2)
+        {
+            return "primenumber";
+        }
+        else
+        {
+            return "not a prime number"
+        }
+
+    }
+    var check=check(13)
+    console.log(check)*/
+//7)Write a function which can check a given number is palindrome or not
+  /*  function palindrome(a){
+                            var c=0;
+                            var d=a
+                            for(a;a>0;a){
+                            var b=a%10
+                            a=parseInt(a/10)
+                            c=c*10+b
+                            }
+                            if(d==c)
+                            {
+                            return "palindrome"
+                            }
+                            else
+                            {
+                                return "not a palindrome"
+                            }
+                        }
+        var res= palindrome(323)
+        console.log(res)*/
+//8)Write a function to return the number of digits in the given number
+/*function count(a){
+                    var count=0
+                    for(a;a>0;a)
+                    {
+                    var c=a%10
+                    a=parseInt(a/10)
+                    count++
+                    }
+                    return count;
+                }
+        var res=count(124)
+        console.log(res)*/
+//9)Write a function that prints all even numbers between 1 and 20.
+/*function even(a){
+                    for(var i=1;i<=a;i++)
+                    {
+                        if(i%2==0)
+                        {
+                            var c=i
+                            console.log(c)
+                        }
+                    }
+                }
+var res=even(20)*/
+//10)Write a function which can add two numbers
+/*function add(a,b)
+{
+            return a+b;
+}
+var res=add(10,5)
+console.log(res)*/
+//12)Write a function which can display the greatest of the three numbers passed in arguments.
+/*function res(a,b,c){
+        if(a>b&&a>c)
+        {
+            return a
+        }
+        else
+        {
+        if(b>a&&b>c)
+        {
+            return b
+        }
+        else
+        {
+            return c
+        }        
+        }
+    }
+    var res=res(20,12,10)
+    document.write(res)*/
+//13)Write a function which can display the given arguments in ascending order
+/*function sortNums(a,b,c){
+
+if(a<b&& a<c)
+        {    
+                    if(b<c)
+                    return([a,b,c])
+                    else
+                    return([a,c,b])
+        } 
+else
+{
+    if(b<c && b<a)
+    {
+        if(a<c)
+            return([b,a,c])
+        else
+        return([b,c,a])
+    }
+    else{
+        if(c<b && c<a){
+            if(a<b)
+            return([c,a,b])
+            else
+            return([c,b,a])
+        }
+    }
+}
+                            }
+                            var ascending = sortNums(3,10,2);
+                            document.write(ascending);*/
+//13)Write a function which can display the factorial of a number
+/*function fact(a)
+    {
+    var fact=1
+    for(var i=1;i<=a;i++){
+        fact=fact*i
+    }
+    return fact
+    }
+    var factorial = fact(5);
+    document.write(factorial);*/
+//14)Write a function which can to display the reverse of a given number
+/*function rev(a){
+                            var c=0;
+                            for(a;a>0;a){
+                            var b=a%10
+                            a=parseInt(a/10)
+                            c=c*10+b
+                            }
+                            return c
+                }
+                            var reverse = rev(4125);
+                            document.write(reverse);*/
+//15)Write a function which can check a given number is palindrome or not
+/*function palindrome(a){
+                            var c=0;
+                            var d=a
+                            for(a;a>0;a){
+                            var b=a%10
+                            a=parseInt(a/10)
+                            c=c*10+b
+                            }
+                            if(d==c)
+                            {
+                            return "palindrome"
+                            }
+                            else
+                            {
+                                return "not a palindrome"
+                            }
+                        }
+        var res= palindrome(323)
+        document.write(res)*/
+//16)Write a function which can check a given number is prime number or not
+/*function check(a){
+        var count=0
+        for(var i=0;i<=a;i++)
+        {
+            if(a%i===0)
+            {
+                count++
+            }
+        }
+        if(count<=2)
+        {
+            return "prime number";
+        }
+        else
+        {
+            return "not a prime number";
+        }
+
+    }
+    var check=check(12)
+    document.write(check)*/
+//17)Write a function which can check a given number is armstrong number or not
+/*function check(a)
+{
+    var c=a
+    var d=a
+    var e=0
+    var i=0
+    for(var c;c>0;c)
+    {
+        c=parseInt(c/10)
+        i++
+    }
+    for(var d;d>0;d)
+    {
+        b=d%10
+        e=e+b**i
+        d=parseInt(d/10)
+    }
+    if(e===a)
+    {
+        return "armstrong number"
+    }
+    else
+    {
+        return "not a armstrong number"
+    }
+}
+var res=check(163)
+console.log(res)
+document.write(res)*/
+//18)Write a function which can return the factorial of a number to another variable
+/*function fact(a)
+{   
+    var fact=1
+    for(var i=1;i<=a;i++)
+    {
+        fact=fact*i
+    }
+    return fact
+}
+var res=fact(a=+prompt())
+console.log(res)
+document.write(res)*/
+//19)Write a function to display the number of digits in the given number
+/*function count(a){
+                    var count=0
+                    for(a;a>0;a)
+                    {
+                    var c=a%10
+                    a=parseInt(a/10)
+                    count++
+                    }
+                    return count;
+                }
+        var res=count(124)
+        console.log(res)
+        document.write(res)*/
+//20)Write a function that returns an array of all even numbers between 1 and 20.
+/*function even(a)
+{
+    for(var i=1;i<=a;i++)
+    {
+        if(i%2===0)
+        {
+            document.write(i)
+        }
+    }
+}
+even(20)*/
+//21)Cube of any number using the function.
+/*function cube(a)
+    {
+    return (a**3)
+    }
+var b=cube(a=+prompt())
+console.log(b)
+document.write(b)*/
+//22)Find diameter, circumference and area of a circle using functions.
+/*function diameter(r)
+        {
+            d=r+r
+            return d
+        };
+function perimeter(r)
+        {
+            p=2*3.14*r
+            return p
+        };
+function area(r)
+        {
+            v=3.14*r*r
+            return v
+        };
+var a=diameter(6)
+var b=perimeter(5)
+var c=area(5)
+console.log(a,b,c)*/
+//23)Maximum and minimum between two numbers using functions.
+/*function compare(a,b)
+                    {
+                        if(a>b)
+                        {
+                            console.log(a+" is maximum")
+                            console.log(b+"is minimum")
+                        }
+                        else
+                        {
+                            console.log(b+" is maximum")
+                            console.log(a+" is minimum")
+                        }
+                    }
+compare(10,12)*/
+//24)Check whether a number is even or odd using functions.
+/*function check(a)
+                {
+                    if(a%2===0)
+                    {
+                        return "even"
+                    }
+                    else
+                    {
+                        return "odd"
+                    }
+                }
+var a=check(+prompt())
+console.log(a)*/
+//25)Check whether a number is prime, Armstrong or perfect number using functions.
+/*function fact(a)
+{   
+    var fact=1
+    for(var i=1;i<=a;i++)
+    {
+        fact=fact*i
+    }
+    return fact
+}
+function check(a)
+                {
+                    var c=a
+                    var d=a
+                    var e=0
+                    var g=0
+                    var num=a
+                    var count=0
+                    var strong_number=0
+                    for(c;c>0;c)
+                    {
+                        c=parseInt(c/10)
+                        g++
+                    }
+                    for(d;d>0;d)
+                    {
+                     var b=d%10
+                     e=e+b**g
+                     d=parseInt(d/10)
+                    }
+                    if(e===a)
+                    {
+                        console.log("armstrong number")
+                    }
+                    else
+                    {
+                        console.log("not a armstrong number")
+                    }
+                    for(var i=0;i<=a;i++)
+                    {
+                        if(a%i==0)
+                        {
+                            count++
+                        }
+                    }
+                    if(count<=2)
+                    {
+                        console.log("prime number")
+                    }
+                    else
+                    {
+                        console.log("not a prime number")
+                    }
+                    for(num;num>0;num)
+                    {
+                        var k=num%10
+                        num=parseInt(num/10)
+                        var s=fact(k)
+                        strong_number=strong_number+s
+                    }
+                    if(a===strong_number)
+                    {
+                        console.log("strong number")
+                    }
+                    else
+                    {
+                        console.log("not a strong number")
+                    }
+                    var perfect_number=0
+                    for(var i=0;i<a;i++)
+                    {
+                        if(a%i==0)
+                        {
+                            perfect_number=perfect_number+i
+                        }
+                    }
+                    if(perfect_number===a)
+                    {
+                        console.log("perfect number")
+                    }
+                    else
+                    {
+                        console.log("not a perfect number")
+                    }
+
+                }
+check(6)*/
+    </script>
+    </body>
+</html>

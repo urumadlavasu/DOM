@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>  even numbers of array of numbers in list items</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+             var ar = [1,2,3,64,25,89,45,];
+
+            var jh1= <div>{
+                ar.map((a)=>{
+                    return (a>25 ?<li>{a}</li> :null)
+                })
+               
+            }</div>
+            ReactDOM.render(jh1,document.getElementById("d1"))
+

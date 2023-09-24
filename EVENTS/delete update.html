@@ -1,0 +1,120 @@
+<html>
+    <head></head>
+    <body>
+        <label>first name</label>
+        <input type="text" id="a">
+        <br>
+        <label>last name</label>
+        <input type="text" id="b">
+        <br>
+        <label>gender</label>
+        <input type="text" id="c">
+        <br>
+        <button onclick="a()" id="button">Submit</button>
+        <div>
+          <table border="2" cellspacing="4">
+
+          </table>  
+        </div>
+        <script>
+        var students=[]
+        var y=document.querySelector("table")
+            var i1=document.getElementById("a")
+            var i2=document.getElementById("b")
+            var i3=document.getElementById("c")
+            var bt=document.getElementById("button")
+            var button=document.createElement("button")
+            var index
+        function a(){
+            var student={firstname:i1.value,
+                        lastname:i2.value,
+                        gender:i3.value,
+                        }
+            
+            students.push(student)
+            i1.value=""
+            i2.value=""
+            i3.value=""
+            v()       
+            }
+            
+            button.innerHTML="update tables"
+            function v() {
+                y.innerHTML=""
+                var tr1=document.createElement("tr")
+                var th1=document.createElement("th")
+                var th2=document.createElement("th")
+                var th3=document.createElement("th")
+                var th4=document.createElement("th")
+                th1.innerHTML="first name"
+                th2.innerHTML="Last Name"
+                th3.innerHTML="Gender"
+                th4.innerHTML="Actions"
+
+                tr1.appendChild(th1)
+                tr1.appendChild(th2)
+                tr1.appendChild(th3)
+                tr1.appendChild(th4)
+                y.appendChild(tr1)
+                
+                students.forEach(function(q,i){
+                var a = document.createElement("tr");
+                var b = document.createElement("td");
+                var c = document.createElement("td");
+                var d = document.createElement("td");
+                var e=document.createElement("button")
+                var f=document.createElement("button")
+                var g = document.createElement("td");
+                b.innerHTML=students[i].firstname
+                c.innerHTML=students[i].lastname                
+                d.innerHTML=students[i].gender
+                e.innerHTML="Delete"
+                f.innerHTML="EDIT"
+                a.appendChild(b)
+                a.appendChild(c)
+                a.appendChild(d)
+                g.appendChild(e)
+                g.appendChild(f)
+                a.appendChild(g)
+                y.appendChild(a)
+                //y.style.border="2px solid"  
+                e.onclick=function(){
+                    
+                    students.splice(i,1)
+                    
+                    v()  
+                }
+                f.onclick=function(){
+                    i1.value=q.firstname
+                    i2.value=q.lastname 
+                    i3.value=q.gender
+                    
+                    bt.style.display="none"
+                    button.style.display="block"
+                    index=i
+                    document.body.appendChild(button)
+                    }
+                    
+                    
+  
+                
+                });
+            };
+                    button.onclick=function(){
+                        var student={firstname:i1.value,
+                        lastname:i2.value,
+                        gender:i3.value,
+                        }
+                        students[index]=student
+                        
+                        button.style.display="none"
+                        bt.style.display="block"
+                        i1.value=""
+                        i2.value=""
+                        i3.value=""
+                        v()
+                    }
+
+        </script>
+    </body>
+</html>

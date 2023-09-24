@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var maleimg="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg"
+            var femaleimg="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+           function Abc(){
+           var[selectedGender,setSelectedGender]=React.useState("male")
+
+           function handleChange(e){
+            setSelectedGender(e.target.value)
+           }
+           
+            return(
+                <div>
+                   <input name="gen" type="radio" value="male" checked={selectedGender === "male"} onChange={handleChange}/>Male
+                   <input name="gen" type="radio" value="female" checked={selectedGender ==="female"} onChange={handleChange}/>Female
+                   <br/>
+                   <img src={selectedGender === "male" ? maleimg : femaleimg } alt=""/>
+                </div>
+            )
+           }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

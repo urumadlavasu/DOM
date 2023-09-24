@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>4Q</title>
+        <style>
+            .box{
+                border: 1px solid black;
+                padding :20px;
+                width:100px; 
+                height:100px;  
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="box" onmouseover="abc(event)"></div>
+    
+    <script>
+
+        // var ar = ['red','blue','orange','green','pink']
+        // var index = 0
+        // function abc(e){
+        //     var x = document.querySelector(".box");
+        //     x.style.backgroundColor= ar[index];
+        //     index = (index+1)%ar.length
+        // }
+
+
+
+        var ar = ['red','blue','orange','green','pink']
+        index=0;
+        function abc(e){
+            var x = document.querySelector(".box");
+            x.style.backgroundColor= ar[index];
+            index= (index+1)%ar.length
+        }
+    </script>
+    </body>
+</html>

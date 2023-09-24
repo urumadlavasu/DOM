@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text"placeholder="firstname" id="a">
+        <br>
+        <input type="text"placeholder="lastname" id="b">
+        <br>
+        <input type="text"placeholder="age" id="c">
+        <br>
+        <br>
+
+    <script>
+        var students=[];
+        var y=document.querySelector("table")
+        function a(){
+            var student={firstname:"",
+                        lastname:"",
+                        age:"",
+                        }
+            student.firstname=document.getElementById("a").value
+            student.lastname=document.getElementById("b").value
+            student.age=document.getElementById("c").value
+            students.push(JSON.stringify(student));
+            console.log(students)
+            document.write(students)
+            v()
+            
+                    }
+            
+            function  v() {
+                students.forEach(function(q,i){
+                var a = document.createElement("tr");
+                var b = document.createElement("td");
+                var c = document.createElement("td");
+                var d = document.createElement("td");
+                b.innerHTML=students[i].firstname
+                c.innerHTML=students[i].lastname                
+                d.innerHTML=students[i].age
+                a.appendChild(b)
+                a.appendChild(c)
+                a.appendChild(d)
+                y.appendChild(a)
+                y.style.border="2px solid"   
+                });
+            };
+
+    </script>
+    </body>
+</html>

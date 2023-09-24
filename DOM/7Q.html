@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            7Q
+        </title>
+    </head>
+    <body>
+        <script>
+        //    7Q. Display the above data like the following image using Javascript DOM Element creation and append
+        var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                        ]
+
+                            var outerol = document.createElement("ol")
+                            document.body.appendChild(outerol)
+                                
+                            students.forEach(function(a){
+                                var firstli = document.createElement("li")
+                                var innerol = document.createElement("ol")
+                               
+                            
+                               firstli.innerHTML= a.firstname;
+                               a.subjects.forEach(function(b){
+                                var inner = document.createElement("li")
+                                inner.innerHTML = b
+                                innerol.appendChild(inner)
+                               })
+
+                               firstli.appendChild(innerol);
+                               outerol.appendChild(firstli);
+
+
+                            })
+
+        </script>
+    </body>
+</html>

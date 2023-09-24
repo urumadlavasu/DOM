@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        
+        <div id="d1"></div>
+        <script type="text/babel">
+           function TodoList(){
+           
+            var newtask = document.getElementsByClassName("bi")
+               
+        var handleClick=(e)=>{
+                for(var i=0;i<newtask.length;i++)
+                {
+                newtask[i].id=i
+                newtask[i].classList.add("bi-star")
+                newtask[i].classList.remove("bi-star-fill")
+                }
+                for(var i=0;i<=e.target.id;i++)
+                {
+                newtask[i].classList.remove("bi-star")
+                newtask[i].classList.add("bi-star-fill")
+              
+                   
+                }
+                
+            }
+            return(
+               <div>
+                <h1>Rating:</h1>
+                <h1>0/5</h1>
+                <i onClick={handleClick} class="bi bi-star"></i>
+                <i onClick={handleClick} class="bi bi-star"></i>
+                <i onClick={handleClick} class="bi bi-star"></i>
+                <i onClick={handleClick} class="bi bi-star"></i>
+                <i onClick={handleClick} class="bi bi-star"></i>
+                </div>
+            
+            )
+           }
+           ReactDOM.render(<TodoList/>,document.getElementById("d1"))
+          
+           
+        </script>
+    </body>
+</html>

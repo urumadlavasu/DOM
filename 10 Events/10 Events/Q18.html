@@ -1,0 +1,42 @@
+<html>
+    <head>
+      <style>
+         button:hover{
+           background-color: black;
+           color : white;
+         }  
+      </style>
+    </head>
+    <body>
+         <h1 id="box"></h1>
+         <div style="margin-top:10px; margin-left:8px">
+            <button onclick="green()">green</button>
+            <button onclick="red()">red</button>
+            <button onclick="blue()">blue</button>
+            <button onclick="restart()">restart</button>
+        </div>
+        <script>
+             var box = document.getElementById('box');
+             box.style.height = '200px';
+             box.style.width = '200px';
+             box.style.border = '2px solid black';
+
+
+             function green(){
+                box.style.backgroundColor = 'green';
+             }
+
+             function red(){
+                box.style.backgroundColor = 'red';
+             }
+
+             function blue(){
+                box.style.backgroundColor = 'blue';
+             }
+
+             function restart(){
+                box.style.backgroundColor = 'white';
+             }
+        </script>
+    </body>
+</html>

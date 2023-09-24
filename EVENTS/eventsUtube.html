@@ -1,0 +1,74 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <!-- <button onmouseover="console.log('mouseonme')"
+        onclick="abc(event)"
+        >clickme</button> -->
+
+
+
+
+        <input type="text" onkeyup="pqr(event)">
+
+        <h1 id="d2"></h1>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+
+            <button onclick="abc(event)">button1</button>
+            <button onclick="abc(event)">anotherbutton</button>
+
+            <h1 onclick="abc(event)">hello vasu</h1>
+            <h1 onclick="abc(event)">hello praveen</h1>
+            <h1 onclick="abc(event)">hello vamshi</h1>
+            <h1 onclick="abc(event)">hello akhil</h1>
+            <h1 onclick="abc(event)">hello ajay</h1>
+
+    </body>
+
+    <script>
+        // function abc(ev){
+        //     console.log("hi vasu",ev)
+        // }
+
+        // function abc(ev){
+        //    ev.target.style.color="red"
+        // console.log(ev.target.innerHTML)
+
+            // console.log(ev.target.nextElementSibling.innerHTML);
+            // ev.target.nextElementSibling.style.color="red";
+            // ev.target.previousElementSibling.style.color="blue";
+            // console.log(ev.target.previousElementSibling.innerHTML)
+            // console.dir(ev.target)
+
+        // }
+
+
+
+
+
+        function pqr(ev){
+            // console.log(ev.target.value);
+            var x = document.getElementById("d2");
+            x.innerHTML=ev.target.value
+
+        }
+    </script>
+</html>

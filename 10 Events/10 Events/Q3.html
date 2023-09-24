@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+
+      <style>
+          #btn {
+            background-color: white;
+            color: #000;
+            padding: 5px 15px;
+            border: 1px solid red;
+          }
+          #btn.active{
+            background-color: green;
+            color: #fff;
+            border: none;
+          }
+      </style>
+    </head>
+    <body>
+        <div style="text-align: center">
+            <button id="btn" onclick="changebg()">white</button>
+        </div>
+
+        <script>
+             var btn = document.getElementById('btn');
+             
+             function changebg(){
+                btn.classList.toggle("active");
+                
+                if(btn.innerHTML === 'white'){
+                  btn.innerHTML = 'green';
+                } else{
+                  btn.innerHTML = 'white'
+                }
+             }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,373 @@
+<html>
+    <head>
+        <title>8Q.</title>
+    </head>
+    <body>
+        <script>
+             var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+
+                        // 1Q.Display all the people's data in a table.
+
+
+                        //    var tableElement = document.createElement("table");
+                        //    tableElement.setAttribute("border","1");
+                        //    tableElement.setAttribute( "cellpadding", "2");
+
+
+                        //    var trow1 = document.createElement("tr");
+                        //    var th1 = document.createElement('th');
+                        //    th1.innerHTML = "firstname";
+                        //    var th2 = document.createElement('th');
+                        //    th2.innerHTML = "secondname";
+                        //    var th3 = document.createElement('th');
+                        //     th3.innerHTML = "age";
+                        //    var th4 = document.createElement('th');
+                        //    th4.innerHTML = "gender";
+                        //    var th5 = document.createElement('th');
+                        //    th5.innerHTML = "city";
+                        //    var th6 = document.createElement('th');
+                        //    th6.innerHTML = "salary";
+
+                        //    trow1.appendChild(th1);
+                        //    trow1.appendChild(th2);
+                        //    trow1.appendChild(th3);
+                        //    trow1.appendChild(th4);
+                        //    trow1.appendChild(th5);
+                        //    trow1.appendChild(th6);
+
+                        //    tableElement.appendChild(trow1);
+                        //    document.body.appendChild(tableElement);
+
+                        //    people.forEach(function(a){
+                        //     var trow2 = document.createElement("tr");
+
+                        //     var td1 = document.createElement("td");
+                        //     td1.innerHTML = a.firstname;
+                        //     var td2 = document.createElement("td");
+                        //     td2.innerHTML = a.lastname;
+                        //     var td3 = document.createElement("td");
+                        //     td3.innerHTML = a.age;
+                        //     var td4 = document.createElement("td");
+                        //     td4.innerHTML = a.gender;
+                        //     var td5 = document.createElement("td");
+                        //     td5.innerHTML = a.city;
+                        //     var td6 = document.createElement("td");
+                        //     td6.innerHTML = a.salary
+                        //     trow2.appendChild(td1);
+                        //     trow2.appendChild(td2);
+                        //     trow2.appendChild(td3);
+                        //     trow2.appendChild(td4);
+                        //     trow2.appendChild(td5);
+                        //     trow2.appendChild(td6);
+
+                        //     tableElement.appendChild(trow2)
+
+                        //    })
+
+                    //   2Q.  Display all male and female people in two separate tables.
+
+                            // var tableElement = document.createElement("table");
+                            // tableElement.setAttribute("border","1");
+                            // tableElement.setAttribute("cellpadding","2");
+
+                            // var trow1 = document.createElement("tr");
+                            // var th1 = document.createElement("th");
+                            // th1.innerHTML = "firstname";
+                            // var th2 = document.createElement("th");
+                            // th2.innerHTML = "lastname";
+                            // var th3 = document.createElement("th");
+                            // th3.innerHTML= "age";
+                            // var th4 = document.createElement("th");
+                            // th4.innerHTML = "gender";
+                            // var th5 = document.createElement("th");
+                            // th5.innerHTML = "city";
+                            // var th6 = document.createElement("th");
+                            // th6.innerHTML = "salary";
+
+                            // trow1.appendChild(th1);
+                            // trow1.appendChild(th2);
+                            // trow1.appendChild(th3);
+                            // trow1.appendChild(th4);
+                            // trow1.appendChild(th5);
+                            // trow1.appendChild(th6);
+
+                            // tableElement.appendChild(trow1);
+                            // document.body.appendChild(tableElement);
+
+                            // people.forEach(function(a){
+                            //     var trow2 = document.createElement("tr");
+
+
+                            //     var td1 = document.createElement("td");
+                            //     td1.innerHTML = a.firstname;
+                            //     var td2 = document.createElement("td");
+                            //     td2.innerHTML = a.lastname;
+                            //     var td3 = document.createElement("td");
+                            //     td3.innerHTML = a.age;
+                            //     var td4 = document.createElement("td");
+                            //     td4.innerHTML = a.gender;
+                            //     var td5 = document.createElement("td");
+                            //     td5.innerHTML = a.city;
+                            //     var td6 = document.createElement("td");
+                            //     td6.innerHTML = a.salary;
+
+                            //     trow2.appendChild(td1);
+                            //     trow2.appendChild(td2);
+                            //     trow2.appendChild(td3);
+                            //     trow2.appendChild(td4);
+                            //     trow2.appendChild(td5);
+                            //     trow2.appendChild(td6);
+
+                            //     tableElement.appendChild(trow2)
+
+                            //     if(a.gender === "female"){
+                            //         trow2.style.display = "none"
+                            //     }
+                            // });
+                               
+                            //    document.write('<br>');
+                            //    document.write('<br>');
+                            //    document.write('<br>');
+
+
+                            // var tableElement = document.createElement("table");
+                            // tableElement.setAttribute("border","1");
+                            // tableElement.setAttribute("cellpadding","2");
+
+                            // var trow1 = document.createElement("tr");
+                            // var th1 = document.createElement("th");
+                            // th1.innerHTML = "firstname";
+                            // var th2 = document.createElement("th");
+                            // th2.innerHTML = "lastname";
+                            // var th3 = document.createElement("th");
+                            // th3.innerHTML= "age";
+                            // var th4 = document.createElement("th");
+                            // th4.innerHTML = "gender";
+                            // var th5 = document.createElement("th");
+                            // th5.innerHTML = "city";
+                            // var th6 = document.createElement("th");
+                            // th6.innerHTML = "salary";
+
+                            // trow1.appendChild(th1);
+                            // trow1.appendChild(th2);
+                            // trow1.appendChild(th3);
+                            // trow1.appendChild(th4);
+                            // trow1.appendChild(th5);
+                            // trow1.appendChild(th6);
+
+                            // tableElement.appendChild(trow1);
+                            // document.body.appendChild(tableElement);
+
+                            // people.forEach(function(a){
+                            //     var trow2 = document.createElement("tr");
+
+
+                            //     var td1 = document.createElement("td");
+                            //     td1.innerHTML = a.firstname;
+                            //     var td2 = document.createElement("td");
+                            //     td2.innerHTML = a.lastname;
+                            //     var td3 = document.createElement("td");
+                            //     td3.innerHTML = a.age;
+                            //     var td4 = document.createElement("td");
+                            //     td4.innerHTML = a.gender;
+                            //     var td5 = document.createElement("td");
+                            //     td5.innerHTML = a.city;
+                            //     var td6 = document.createElement("td");
+                            //     td6.innerHTML = a.salary;
+
+                            //     trow2.appendChild(td1);
+                            //     trow2.appendChild(td2);
+                            //     trow2.appendChild(td3);
+                            //     trow2.appendChild(td4);
+                            //     trow2.appendChild(td5);
+                            //     trow2.appendChild(td6);
+
+                            //     tableElement.appendChild(trow2)
+
+                            //     if(a.gender === "male"){
+                            //         trow2.style.display = "none"
+                            //     }
+
+
+                               
+                                
+                            // })
+
+
+                        //   3Q.  Display only those people in a table who are having salaries more than 20000     
+
+                        // var tableElement = document.createElement("table");
+                        //     tableElement.setAttribute("border","1");
+                        //     tableElement.setAttribute("cellpadding","2");
+
+                        //     var trow1 = document.createElement("tr");
+                        //     var th1 = document.createElement("th");
+                        //     th1.innerHTML = "firstname";
+                        //     var th2 = document.createElement("th");
+                        //     th2.innerHTML = "lastname";
+                        //     var th3 = document.createElement("th");
+                        //     th3.innerHTML= "age";
+                        //     var th4 = document.createElement("th");
+                        //     th4.innerHTML = "gender";
+                        //     var th5 = document.createElement("th");
+                        //     th5.innerHTML = "city";
+                        //     var th6 = document.createElement("th");
+                        //     th6.innerHTML = "salary";
+
+                        //     trow1.appendChild(th1);
+                        //     trow1.appendChild(th2);
+                        //     trow1.appendChild(th3);
+                        //     trow1.appendChild(th4);
+                        //     trow1.appendChild(th5);
+                        //     trow1.appendChild(th6);
+
+                        //     tableElement.appendChild(trow1);
+                        //     document.body.appendChild(tableElement);
+
+                        //     people.forEach(function(a){
+                        //         var trow2 = document.createElement("tr");
+
+
+                        //         var td1 = document.createElement("td");
+                        //         td1.innerHTML = a.firstname;
+                        //         var td2 = document.createElement("td");
+                        //         td2.innerHTML = a.lastname;
+                        //         var td3 = document.createElement("td");
+                        //         td3.innerHTML = a.age;
+                        //         var td4 = document.createElement("td");
+                        //         td4.innerHTML = a.gender;
+                        //         var td5 = document.createElement("td");
+                        //         td5.innerHTML = a.city;
+                        //         var td6 = document.createElement("td");
+                        //         td6.innerHTML = a.salary;
+
+                        //         trow2.appendChild(td1);
+                        //         trow2.appendChild(td2);
+                        //         trow2.appendChild(td3);
+                        //         trow2.appendChild(td4);
+                        //         trow2.appendChild(td5);
+                        //         trow2.appendChild(td6);
+
+                        //         tableElement.appendChild(trow2)
+
+                        //         if(a.salary<20000){
+                        //             trow2.style.display = "none"
+                        //         }
+
+
+                        //     })
+
+                    //   4Q.  Display only the male people who are above the age of 25.
+
+                        var tableElement = document.createElement("table");
+                            tableElement.setAttribute("border","1");
+                            tableElement.setAttribute("cellpadding","2");
+
+                            var trow1 = document.createElement("tr");
+                            var th1 = document.createElement("th");
+                            th1.innerHTML = "firstname";
+                            var th2 = document.createElement("th");
+                            th2.innerHTML = "lastname";
+                            var th3 = document.createElement("th");
+                            th3.innerHTML= "age";
+                            var th4 = document.createElement("th");
+                            th4.innerHTML = "gender";
+                            var th5 = document.createElement("th");
+                            th5.innerHTML = "city";
+                            var th6 = document.createElement("th");
+                            th6.innerHTML = "salary";
+
+                            trow1.appendChild(th1);
+                            trow1.appendChild(th2);
+                            trow1.appendChild(th3);
+                            trow1.appendChild(th4);
+                            trow1.appendChild(th5);
+                            trow1.appendChild(th6);
+
+                            tableElement.appendChild(trow1);
+                            document.body.appendChild(tableElement);
+
+                            people.forEach(function(a){
+                                var trow2 = document.createElement("tr");
+
+
+                                var td1 = document.createElement("td");
+                                td1.innerHTML = a.firstname;
+                                var td2 = document.createElement("td");
+                                td2.innerHTML = a.lastname;
+                                var td3 = document.createElement("td");
+                                td3.innerHTML = a.age;
+                                var td4 = document.createElement("td");
+                                td4.innerHTML = a.gender;
+                                var td5 = document.createElement("td");
+                                td5.innerHTML = a.city;
+                                var td6 = document.createElement("td");
+                                td6.innerHTML = a.salary;
+
+                                trow2.appendChild(td1);
+                                trow2.appendChild(td2);
+                                trow2.appendChild(td3);
+                                trow2.appendChild(td4);
+                                trow2.appendChild(td5);
+                                trow2.appendChild(td6);
+
+                                tableElement.appendChild(trow2)
+
+                                if((a.age<25)){
+                                    trow2.style.display = "none"
+                                }
+
+
+                            })
+        </script>
+    </body>
+</html>

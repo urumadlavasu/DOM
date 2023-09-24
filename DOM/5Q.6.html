@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>6Q.</title>
+    </head>
+    <body>
+        <script>
+            var ar =["https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_640.jpg",
+                      "https://cdn.pixabay.com/photo/2012/03/01/00/55/flowers-19830_640.jpg",
+                      "https://hips.hearstapps.com/hmg-prod/images/types-of-garden-flowers-purple-allium-1674847068.jpeg"]
+           
+                var x = document.createElement("div");
+                document.body.appendChild(x);
+                 
+                ar.forEach(function(a){
+                    var image = document.createElement("img")
+                    image.src = a;
+                    x.appendChild(image);
+                    console.log(image)
+                })
+
+            
+        </script>
+    </body>
+</html>

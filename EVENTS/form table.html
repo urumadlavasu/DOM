@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>form table</title>
+    </head>
+    <body>
+        <form action="">
+            <input type="text" id="fname" placeholder="firstname"><br>
+            <input type="text" id="lname" placeholder="lastname"><br>
+            <input type="text" id="age" placeholder="age"> <br>
+
+            <button onclick="addstudent(event)">save</button>
+        </form>
+
+        <table>
+            <thead>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+        </table>
+
+        <script>
+            students = []
+            function addstudent(e){
+                e.preventDefault();
+                var a = {
+                    firstname:"",
+                    lastname:"",
+                    age:"",
+                }
+                a.firstname= document.getElementById("fname").value;
+                a.lastname= document.getElementById("lname").value;
+                a.age=document.getElementById("age").value;
+
+                students.push(a)
+                genTable()
+                console.log(students)
+            }
+            function genTable(){
+                document.getElementById("d1").innerHTML="";
+                students.forEach(function(std){
+
+                
+                var ntr = document.createElement("tr");
+
+                var ftd = document.createElement("td");
+                ftd.innerHTML=std.firstname;
+                ntr.appendChild(ftd);
+
+                var ltd = document.createElement("td");
+                ltd.innerHTML=std.lastname;
+                ntr.appendChild(ltd);
+
+                var atd = document.createElement("td");
+                atd.innerHTML=std.age;
+                ntr.appendChild(atd);
+
+                document.getElementById("d1").appendChild(ntr)
+            })
+            }
+            
+
+        </script>
+    </body>
+</html>

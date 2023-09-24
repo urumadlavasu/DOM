@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>   images from array of image urls</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+             var ar = [
+                "https://t4.ftcdn.net/jpg/05/62/17/95/360_F_562179580_PewQkrbl1hrW1i2PXDxMYgQSOgnAx689.jpg",
+                "https://pratidin24ghanta.com/wp-content/uploads/2023/02/Radhe-Krishna-Ki-Photo-HD_after.jpg",
+                "https://e0.pxfuel.com/wallpapers/654/562/desktop-wallpaper-baansuri-ideas-lord-krishna-krishna-krishna-flute-bamboo-flute-thumbnail.jpg"
+
+             ];
+
+             var jh1 = <div>
+                {
+                ar.map((a)=>{
+                    return <img src={a} width="250px"/>
+                })
+             }
+             </div>
+
+           
+            ReactDOM.render(jh1,document.getElementById("d1"))

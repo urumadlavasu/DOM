@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var maleimg="https://img.freepik.com/premium-vector/man-character_665280-46970.jpg"
+            var femaleimg="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+            function abc(e){
+                if(e.target.value==="male"){
+                    document.getElementById("im1").src=maleimg
+                }
+                else{
+                    document.getElementById('im1').src=femaleimg
+                }
+            }
+               
+
+            var jh1= <div>
+                <input type="radio" name="country" value="male" onChange={abc}/>:Male
+                <input type="radio" name="country" value="female" onChange={abc}/>:Female
+                <img src="" id="im1"/>
+                </div>
+            ReactDOM.render(jh1,document.getElementById("d1"))
+            
+        </script>
+        
+        
+    </body>
+</html>

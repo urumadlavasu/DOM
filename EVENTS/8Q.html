@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+          
+
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1 style="color: red;">Like and Dislike Button</h1>
+            <button id="like" onclick="like1(event)">Like</button > 
+            <span id="count1">0</span> <br><br>
+            <button id="dislike" onclick="dislike1(event)">Dislike</button> 
+            <span id="count2">0</span> 
+        </div>
+
+        <script>
+            var like = document.getElementById("like")
+            like.style.padding = "15px";
+            like.style.marginRight="10px";
+            like.style.backgroundColor="lightgreen";
+            like.style.border = '1px solid red';
+
+            var dislike = document.getElementById("dislike")
+            dislike.style.backgroundColor= "red"
+            dislike.style.padding = "15px";
+            dislike.style.marginRight = "10px";
+            dislike.style.border= "1px solid red"
+
+            var spancount1 = document.getElementById("count1")
+            spancount1.style.color="red"
+
+            var spancount2 = document.getElementById("count2")
+            spancount2.style.color="red"
+
+            function like1(e){
+                spancount1.innerHTML++;
+                // console.log(spancount1)
+            }
+
+
+            function dislike1 (a){
+                spancount2.innerHTML++;
+
+            }
+
+
+           
+            
+
+
+            
+            
+        </script>
+    </body>
+</html>

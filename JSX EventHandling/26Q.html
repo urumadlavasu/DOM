@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar = ["vasu","dhoni","sachin","virat"]
+                 function abc (m){
+                    alert(m)
+                 }
+
+            var jh1 = <div>
+                {
+                    ar.map((a,i)=>{
+                        return <li onClick={()=>{abc(a)}}>{a}</li>
+                    })
+                }
+                </div>
+            ReactDOM.render(jh1,document.getElementById("d1"))
+            
+        </script>
+        
+        
+    </body>
+</html>

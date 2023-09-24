@@ -1,0 +1,112 @@
+<html>
+    <head>
+
+    </head>
+    <body style="text-align: center">
+        <h1 style="color: red">Add Contact Cards</h1>
+         <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required/><br><br>
+
+            <label for="num">Number:</label>
+            <input type="number" id="num"/><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"/><br><br>
+
+            <label for="imgurl" id="imgprofile">Enter Image URL:</label>
+            <input type="text" id="imgurl"/><br><br>
+
+            <button id='btn' onclick="addContact(event)">Add Contact</button>
+         </form>
+         <div id="card">
+
+         </div>
+
+        <script>
+             var labelElement = document.querySelectorAll("label");
+             var nameInputEl = document.getElementById('name');
+             var numberInputEl = document.getElementById('num');
+             var emailInputEl = document.getElementById('email');
+             var imgInputEl = document.getElementById('imgurl');
+             var btn = document.getElementById('btn');
+
+             btn.style.padding = '8px';
+             btn.style.border = 'none';
+             btn.style.borderRadius = '3px'
+             btn.style.fontWeight = 'bold';
+             btn.style.backgroundColor = 'orange';
+
+             for(var i=0; i<=labelElement.length-1;i++){
+                labelElement[i].style.color = 'red';
+                labelElement[i].style.fontWeight = 'bold';
+             }
+
+             var addedContacts = [];
+             
+            
+
+             function addContact(k){
+                k.preventDefault();
+                var contacts = {
+                name : '',
+                num : '',
+                email : '',
+                profile : '',
+             }
+               
+                contacts.name = nameInputEl.value;
+                contacts.num = numberInputEl.value;
+                contacts.email = emailInputEl.value;
+                contacts.profile = imgInputEl.value;
+                
+                addedContacts.push(contacts);
+                card();
+            }
+              
+            function card(){
+                var card = document.getElementById('card');
+                card.innerHTML = '';
+                card.style.display = 'flex';
+                card.style.flexDirection = 'column'
+                card.style.justifyContnet = 'center';
+                card.style.alignItems = 'center';
+                card.style.height = 'auto';
+                card.style.width = '400px';
+                card.style.backgroundColor = 'yellow';
+                card.style.color = 'red';
+                card.style.border = '5px solid red';
+                card.style.borderRadius = '8px';
+                card.style.padding = '20px';
+           
+             addedContacts.forEach(function(a){
+                var h4El = document.createElement('h4')
+                h4El.style.margin = '8px';
+                var h3El = document.createElement('h3')
+                h3El.style.margin = '8px';
+                var h2El = document.createElement('h2');
+                h2El.style.margin = '8px';
+
+                var imgDisplay = document.createElement('img');
+                imgDisplay.style.width = '80px';
+                imgDisplay.style.height = '80px';
+                imgDisplay.style.borderRadius = '50%';
+              
+                imgDisplay.src = a.profile;
+                h2El.innerHTML = "Name: "+ a.name;
+                h3El.innerHTML = "Number: "+ a.num;
+                h4El.innerHTML = "Email: " + a.email;
+                              
+                card.appendChild(imgDisplay);
+                card.appendChild(h2El);
+                card.appendChild(h3El);
+                card.appendChild(h4El);
+
+                document.body.appendChild(card);
+                console.log(card)
+            })
+            }
+             
+        </script>
+    </body>
+</html>

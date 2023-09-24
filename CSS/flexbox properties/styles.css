@@ -1,0 +1,36 @@
+/* .box{
+    width:50%;
+    border:1px solid black;
+    display: inline-block;
+    margin: -2px;
+    vertical-align: bottom;
+}
+
+.left{
+    height: 500px;
+}
+
+.right{
+    height:350px;
+} */
+
+
+.d-flex{
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.box{
+    width:50%;
+    border:1px solid black;
+}
+
+.left{
+    height:500px;
+}
+
+.right{
+    height:350px
+
+}

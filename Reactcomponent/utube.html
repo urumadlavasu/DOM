@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>1. bind event handler to alert something on button click in jsx</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+
+
+        <div id="d1"></div>
+        <script type="text/babel">
+
+        //    var x = function(){return <i>Rohit Sharcma</i>}
+        //    var y = <h1>
+        //     Indian cricket captain is<x></x> 
+        //     <br/>
+        //     <x></x> is my Fav Cricketer
+
+        //     </h1>
+
+        
+
+        // var Counter = function (){
+        //     var [c,SetC] = React.useState(10);
+        //     function inc (){
+        //         SetC(c+1)
+        //         console.log(c)
+        //     }
+        //     function dec (){
+        //         SetC(c-1)
+        //         console.log(c)
+        //     }
+        //     var c=0
+        //     return(
+        //         <div>
+        //             <h1>Counter:{c}</h1>
+        //             <button onClick={()=>{inc()}}>Increment</button>
+        //             <button onClick={()=>{dec()}}>Decrement</button>
+        //             </div>
+        //     )
+        // }
+          
+        //     ReactDOM.render(<Counter></Counter>,document.getElementById("d1"))
+
+
+       
+          
+       const TodoList = function(){
+            var [todos,Settodos]=React.useState(["clear bills","pay bills"])
+            function addtodo(){
+                var newtask = document.getElementById("inptid").value
+                Settodos([...todos,newtask])
+            }
+                    return (
+                        <div>
+                            <h1>Todolist</h1>
+                            <input type="text" id="inptid"/>
+                            <button onClick={()=>{addtodo()}}>AddTodo</button>
+                            <ul>{
+                                todos.map((todo)=>{
+                                    return <li>{todo}</li>
+                                })
+                            }
+                                
+                                </ul>
+                            
+                            </div>
+                    )
+       }
+        ReactDOM.render(<TodoList/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

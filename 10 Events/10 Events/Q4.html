@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+         <h1 id="box" onmouseover="changebg()"></h1>
+        <script>
+             var box = document.getElementById('box');
+             box.style.height = '200px';
+             box.style.width = '200px';
+             box.style.border = '2px solid black';
+
+             var colors = ['red', 'green', 'blue', 'yellow']
+             var i = 0;
+             function changebg(){
+                box.style.backgroundColor = colors[i];
+                i = (i+1)%colors.length;
+             }
+            
+
+        </script>
+    </body>
+</html>

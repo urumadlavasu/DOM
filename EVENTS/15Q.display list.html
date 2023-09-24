@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>display list</title>
+        <style>
+            h1{
+                color: red;
+            }
+
+            button{
+                background-color: orange;
+                border: 1px solid orange;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1>Add Students</h1>
+            <input type="text" name="" id="show">
+            <button  onclick="btn()">Add Student</button>
+        </div>
+
+        <ul id="d1">
+
+        </ul>
+
+        <script>
+            var y = document.getElementById("show");
+            var x = document.getElementById("d1");
+             
+            var students = [];
+            function btn(){
+                students.push(y.value)
+                console.log(students)
+                addedlist()
+            }
+            function addedlist(){
+                x.innerHTML=""
+                students.forEach(function(student){
+                    var nli = document.createElement("li")
+                    nli.innerHTML=student;
+                    x.appendChild(nli)
+                })
+            }
+            
+                
+            
+
+            
+                
+            
+
+            
+        </script>
+
+
+    </body>
+</html>

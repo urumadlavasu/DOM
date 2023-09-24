@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+           function TodoList(){
+            var[time,setTime]=React.useState(new Date().toLocaleTimeString());
+           
+             setInterval(()=>{
+                setTime(new Date().toLocaleTimeString());
+            },1000)
+            
+            return(
+               <div>
+                <h1>{time}</h1>
+                </div>
+            
+            )
+           }
+           ReactDOM.render(<TodoList/>,document.getElementById("d1"))
+          
+           
+        </script>
+    </body>
+</html>

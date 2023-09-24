@@ -1,0 +1,118 @@
+<html>
+    <head>
+      <style>
+        .abc{
+          border:2px solid red;
+          padding:20px
+        }
+      </style>
+    </head>
+    <body>
+        <!-- <h1 class="abc">vasu</h1>
+        <h1  class="abc">syed</h1>
+        <h1 id="d3">aravind</h1>
+        <h1>manu</h1>
+        <h1 class="abc">nithin</h1>
+
+        <p id="d5">
+          This handout will help you understand how paragraphs are formed, how to develop stronger paragraphs, and how to completely and clearly express your ideas.
+What is a paragraph?
+        </p> -->
+
+        <div class="abc"> 
+
+        </div>
+        <h1>This is Vasu</h1>
+
+        <ul>
+
+        </ul>
+
+        <table id="tb" border="1px" cellpadding="10px" cellspacing="0px">
+
+        </table>
+
+        
+    </body>
+    <script>
+      // var x =  document.getElementById("d1");
+      // x.style.color="red";
+
+      // var y = document.getElementById("d2");
+      // y.style.fontFamily="verdana";
+
+      // var z = document.getElementById("d3");
+      // z.style.color="skyblue";
+
+      // var para = document.getElementById("d5");
+
+      // x.innerHTML="syed fazil"
+
+      // console.log(y.innerHTML);
+      // console.log(para.innerHTML);
+
+      
+
+      // var x = document.querySelectorAll("h1")
+      // console.log(x);
+      // x.forEach(function(el){
+      //  x[0].style.color ="red";
+      //  x[2].style.color= "blue";
+      //  x[3].style.color="pink"
+      // })
+
+
+
+
+      //   var colors = ['pink','brown','green']
+      // var x = document.querySelectorAll(".abc")
+
+      // x.forEach(function(el,i){
+      //   el.style.border = "2px solid green";
+      //   el.style.color=colors[i]
+      // })
+
+          
+
+        var students = ['bhargav','teja','srinath','vasu','charan'];
+
+        var ull = document.querySelector("ul")
+
+        students.forEach(function(a,i){
+          var ntr = document.createElement("tr")
+
+          var std = document.createElement("td")
+          std.innerHTML= i+1;
+          ntr.appendChild(std)
+
+          var ntd = document.createElement("td")
+          ntd.innerHTML= a;
+          ntr.appendChild(ntd);
+          
+          document.getElementById("tb").appendChild(ntr)
+        })
+
+        students.forEach(function(a){
+           var nli = document.createElement("li");
+           nli.innerHTML=a;
+           ull.appendChild(nli)
+        })
+
+       var x= document.createElement("h1")
+       x.innerHTML="Welcome to Edupoly";
+       document.body.appendChild(x)
+
+       
+
+       var y = document.querySelector(".abc")
+       
+      
+
+       y.appendChild(x)
+
+
+
+
+    </script>
+
+</html>

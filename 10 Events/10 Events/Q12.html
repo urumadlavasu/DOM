@@ -1,0 +1,54 @@
+<html>
+    <head></head>
+    <body>
+        <div style="text-align: center">
+            <img id="bus" width="100px" onclick="showbusImg()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN8v_brqZse8vT15Jk2GtRtTPxqizzrbmQVA&usqp=CAU.jpg" alt="bus">
+            <img id="ship" width="100px" onclick="showshipImg()" src="https://img.freepik.com/premium-vector/cartoon-image-ship-with-orange-sails_901492-591.jpg" alt="ship">
+            <img id="flight" width="120px" onclick="showflightImg()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Egh-CzsgZrOzKmjG-RkJJ7Nwnu5nwLIUyQ&usqp=CAU.jpg" alt="flight">
+        </div>
+            <div id="showImg" style="text-align: center">
+               <img id="bus1" src="" alt="">
+               <img id="ship1" src="" alt="">
+               <img id="flight1" src="" alt="">
+            </div>
+
+        <script>
+              var showImgEl = document.getElementById('showImg');
+              var busImg = document.getElementById('bus')
+              var shipImg = document.getElementById('ship')
+              var flightImg = document.getElementById('flight')
+
+              var bus1 = document.getElementById('bus1');
+              var ship1 = document.getElementById('ship1');
+              var flight1 = document.getElementById('flight1');
+            //   showImgEl.appendChild(busImg);
+              function showbusImg(){
+                  showImgEl.appendChild(bus1);
+                  bus1.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN8v_brqZse8vT15Jk2GtRtTPxqizzrbmQVA&usqp=CAU.jpg';
+                  bus1.style.width = '300px';
+                  ship1.style.display = 'none';
+                  flight1.style.display = 'none';
+                  bus1.style.display = 'inline-block';
+                
+              }
+
+              function showshipImg(){
+                showImgEl.appendChild(ship1);
+                ship1.src = 'https://img.freepik.com/premium-vector/cartoon-image-ship-with-orange-sails_901492-591.jpg';
+                ship1.style.width = '260px';
+                bus1.style.display = 'none';
+                flight1.style.display = 'none';
+                ship1.style.display = 'inline-block';
+              }
+
+              function showflightImg(){
+                showImgEl.appendChild(flight1);
+                flight1.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Egh-CzsgZrOzKmjG-RkJJ7Nwnu5nwLIUyQ&usqp=CAU.jpg';
+                flight1.style.width = '330px';
+                bus1.style.display = 'none';
+                ship1.style.display = 'none';
+                flight1.style.display = 'inline-block';
+              }
+        </script>
+    </body>
+</html>

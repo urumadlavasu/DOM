@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>3Q.</title>
+    </head>
+    <body>
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Orange</li>
+         </ul>
+        <script>
+            // 3Q.Store the texts of each li element in an array.
+                var x = document.querySelectorAll("li")
+                var fruits = []
+                x.forEach(function(fruit){
+                   fruits.push(fruit.innerHTML)
+                })
+                console.log(fruits)
+        </script>
+    </body>
+</html>

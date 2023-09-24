@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <style>
+    .toggle-section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .toggle-text {
+      color: red;
+      text-align: center;
+    }
+
+    
+    .toggle-btn {
+      background-color: orange;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .toggle-h1 {
+      color: red;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="toggle-text">Toggle button to show true/false</h1>
+
+    <div class="toggle-section">
+      <button class=" toggle-btn" onclick="abc()">toggle</button>
+      <span class="toggle-h1" id="d1">false</span>
+    </div>
+    
+    <script>
+      var x = document.getElementById("d1")
+       function abc (){
+        
+         if (x.innerHTML==="false") {
+           x.innerHTML="true"
+         }
+         else{
+           x.innerHTML="false"
+         }
+       }
+     
+     </script>
+</body>
+
+
+
+</html>

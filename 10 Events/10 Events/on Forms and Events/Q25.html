@@ -1,0 +1,83 @@
+<html>
+    <head></head>
+    <body>
+        <table border="2" cellspacing="0" cellpadding="2" style="margin: 0 auto">
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" id="fname"/></td>
+            </tr>
+            <tr>
+                <td>Lastname</td>
+                <td><input type="text" id="lname"/></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" id="date"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="gender" id="male"><label for="male">Male &nbsp;</label> <input type="radio" name="gender" id="female"><label for="female">Female &nbsp;</label> <input type="radio" name="gender" id="others"><label for="others">Others &nbsp;</label></td>
+            </tr>
+            <tr>
+                <td>Technologies</td>
+                <td><input type="checkbox" value="HTML" id="html"><label for="html">HTML &nbsp;</label> <input type="checkbox" value="CSS" id="css"><label for="css">CSS &nbsp;</label> <input type="checkbox" value="Bootstrap" id="bootstrap"><label for="bootstrap">Bootstrap &nbsp;</label> <input type="checkbox" value="React" id="react"><label for="react">React &nbsp;</label> <input type="checkbox" value="Java" id="java"><label for="java">Java &nbsp;</label></td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select id="selectcountry">
+                        <option>Australia</option>
+                        <option>USA</option>
+                        <option selected>India</option>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comments:
+                </td>
+                <td>
+                    <textarea id="textarea" cols="20" rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button onclick="saveData()">Save</button>
+                </td>
+            </tr>
+            
+        </table>
+        <div id="displayData">
+
+        </div>
+
+        <script>
+             
+               
+
+            var array = []
+              function saveData(){
+                var data = {
+                    "firstname": '',
+                    "lastname": '',
+                    "dob": '',
+                    "gender": '',
+                    "techs": '',
+                    "country": '',
+                    "comments": ''
+               }    
+              
+              data.firstname = document.getElementById('fname').value;
+              data.lastname = document.getElementById('lname').value;
+              data.date = document.getElementById('date').value;
+              data.textarea = document.getElementById('textarea').value;
+              document.write(JSON.stringify(data))
+              var displayData = document.getElementById('displayData');
+              array.push(data)
+              displayData.innerHTML = JSON.stringify(data)
+              document.body.appendChild(displayData)
+
+              }
+        </script>
+    </body>
+</html>

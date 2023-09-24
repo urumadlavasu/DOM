@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+             var students = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ]
+
+                                var outerul = document.createElement("ul")
+                                document.body.appendChild(outerul);
+
+                                students.forEach(function(a){
+                                    var outerli = document.createElement("li")
+                                    var innerul = document.createElement("ul")
+                                    var innerli1= document.createElement("li")
+                                    var innerli2= document.createElement("li")
+                                
+                                    outerli.innerHTML=a.name;
+                                    innerli1.innerHTML=a.gender;
+                                    innerli2.innerHTML=a.place;
+
+                                    innerul.appendChild(innerli1)
+                                    innerul.appendChild(innerli2)
+                                    outerli.appendChild(innerul)
+                                    outerul.appendChild(outerli)
+                                    
+                                    if(a.gender==="female"){
+                                        outerli.style.backgroundColor="pink"
+                                    }
+                                    else{
+                                        outerli.style.backgroundColor = "skyblue"
+                                    }
+                                })
+                               
+
+
+
+
+        </script>
+    </body>
+</html>

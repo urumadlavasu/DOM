@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>dom.p4</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="fname" placeholder="firstname">
+            <br>
+            <input type="text" id="lname" placeholder="lastname">
+            <br>
+            <input type="text" id="age" placeholder="age">
+            <br>
+
+            <label for="">Gender</label>
+            <input type="radio" name="gen" value="male" onchange="setGender(event)">:Male
+            <input type="radio" name="gen" value="female" onchange="setGender(event)">:Female
+            <input type="radio" name="gen" value="other" onchange="setGender(event)">:other
+            <br>
+
+            <input type="checkbox" value="rjs" onchange="setTechs(event)">:Reactjs
+            <input type="checkbox" value="ajs" onchange="setTechs(event)">:Angularjs
+            <input type="checkbox" value="njs" onchange="setTechs(event)">:Nodejs
+            <input type="checkbox" value="html" onchange="setTechs(event)">:HTML
+
+            <br>
+
+            <button onclick="add(event)">save</button>
+        </form>
+
+        <table border="2px" cellspacing="0px" >
+            <thead>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Techs</th>
+            </thead>
+            <tbody id="tb">
+
+            </tbody>
+        </table>
+
+        <script>
+            var students = [];
+
+            var seletedGender=null;
+            function setGender(ev){
+                selectedGender=ev.target.value
+            }
+
+            var selectedTechs=[];
+            function setTechs(e){
+                // selectedTechs.push(e.target.value)
+                if(e.target.checked===true){
+                    selectedTechs.push(e.target.value)
+                }
+                else{
+                    var i = selectedTechs.indexOf(e.target.value)
+                    selectedTechs.splice(i,1)
+                }
+            }
+
+            function add(ev){
+                ev.preventDefault();
+
+                var ar ={
+                    firstname:"",
+                    lastname:"",
+                    age:"",
+                    gender:"",
+                    techs:[],
+                }
+
+                ar.firstname= document.getElementById("fname").value;
+                ar.lastname= document.getElementById("lname").value;
+                ar.age= document.getElementById("age").value;
+                ar.gender= selectedGender;
+                ar.techs= ar.techs.concat(selectedTechs)
+
+                students.push(ar);
+                genTable();
+                console.log(students)
+            }
+
+            function genTable(){
+                document.getElementById("tb").innerHTML=""
+
+                students.forEach(function(a){
+
+                var ntr =document.createElement("tr");
+                var ftd= document.createElement("td");
+                ftd.innerHTML= a.firstname;
+                ntr.appendChild(ftd);
+
+                var ltd= document.createElement("td");
+                ltd.innerHTML= a.lastname;
+                ntr.appendChild(ltd);
+
+                var atd= document.createElement("td");
+                atd.innerHTML= a.age;
+                ntr.appendChild(atd);
+
+                var gtd= document.createElement("td");
+                gtd.innerHTML= a.gender;
+                ntr.appendChild(gtd);
+
+                var ttd= document.createElement("td");
+                ttd.innerHTML= a.techs;
+                ntr.appendChild(ttd);
+
+                document.getElementById("tb").appendChild(ntr)
+
+
+
+
+                })
+            }
+
+
+        </script>
+
+    </body>
+
+</html>

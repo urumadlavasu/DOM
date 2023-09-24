@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>array object in flex boxes</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+
+        <script type="text/babel">
+            var ob1 = {
+                firstname : "praveen",
+                lastname : "gubbala",
+                place: "jntu",
+            }
+
+            var jh1= <div style={{border:"1px solid",margin:"10px",padding:"10px"}} >
+                <h1>Name:{ob1.firstname}</h1>
+
+                <h4>Lastname:{ob1.lastname}</h4>
+                <i>Place:{ob1.place}</i>
+            </div>
+
+            
+           ReactDOM.render(jh1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>3Q</title>
+    <style>
+      button{
+         /* margin-left: 700px;  */
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div >
+    <button onclick="abc(event)">white</button>
+  </div>
+  </body>
+
+  <script>
+
+    function abc(ev){
+      if(ev.target.innerHTML==="white"){
+        ev.target.innerHTML="green";
+        ev.target.style.backgroundColor="green"
+      }
+      else{
+        ev.target.innerHTML= "white";
+        ev.target.style.backgroundColor="white"
+      }
+    }
+
+  </script>
+</html>

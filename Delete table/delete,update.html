@@ -1,0 +1,164 @@
+<html>
+    <head>
+
+    </head>
+    <body style="text-align: center">
+        <h1 style="color: red">Add Contact Cards</h1>
+         <form>
+            <label for="name">First name:</label>
+            <input type="text" id="name" required/><br><br>
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname"/><br><br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age"/><br><br>
+
+            <button id='btn' onclick="addContact(event)">Add Contact</button>
+            <button id='updatebtn' onclick="update(event)">Update</button>
+         </form>
+         <table id="tb" border="2">
+
+         </table>
+
+        <script>
+             var labelElement = document.querySelectorAll("label");
+             var nameInputEl = document.getElementById('name');
+             var lnameInputEl = document.getElementById('lname');
+             var ageInputEl = document.getElementById('age');
+             var index;
+             var btn = document.getElementById('btn');
+             var updatebtn = document.getElementById('updatebtn');
+             updatebtn.style.display = 'none';
+
+             btn.style.padding = '8px';
+             btn.style.border = 'none';
+             btn.style.borderRadius = '3px'
+             btn.style.fontWeight = 'bold';
+             btn.style.backgroundColor = 'orange';
+
+             for(var i=0; i<=labelElement.length-1;i++){
+                labelElement[i].style.color = 'red';
+                labelElement[i].style.fontWeight = 'bold';
+             }
+
+             var addedContacts = [];
+            console.log(addedContacts)
+             function addContact(k){
+                k.preventDefault();
+                var contacts = {
+                fname : '',
+                lname : '',
+                age : ''
+             }
+               
+                contacts.fname = nameInputEl.value;
+                contacts.lname = lnameInputEl.value;
+                contacts.age = ageInputEl.value;
+                
+                addedContacts.push(contacts);
+                card();
+            }
+
+
+              
+            function card(){
+                var tb = document.getElementById('tb');
+                tb.style.textAlign = 'center';
+                tb.innerHTML = '';
+                var thead = document.createElement('tr');
+
+                 var th1 = document.createElement('th')
+                 th1.innerHTML = 'First name';
+                 var th2 = document.createElement('th')
+                 th2.innerHTML = 'Last name';
+
+                 var th3 = document.createElement('th')
+                th3.innerHTML = 'Age';
+
+                 thead.appendChild(th1);
+                 thead.appendChild(th2);
+                 thead.appendChild(th3);
+
+                 tb.appendChild(thead)
+           
+             addedContacts.forEach(function(a, i){
+                var tr = document.createElement('tr')
+
+                var h4El = document.createElement('td')
+                h4El.style.margin = '8px';
+                var h3El = document.createElement('td')
+                h3El.style.margin = '8px';
+                var h2El = document.createElement('td');
+                h2El.style.margin = '8px';
+                var deleteBtn = document.createElement('td');
+                deleteBtn.style.margin = '8px';
+                var editBtn = document.createElement('td')
+                editBtn.style.margin = '8px';
+
+
+                h4El.innerHTML = a.fname;
+                h3El.innerHTML =  a.lname;
+                h2El.innerHTML =  a.age;
+                deleteBtn.innerHTML = 'Delete'; 
+                deleteBtn.style.cursor = 'pointer';  
+               
+                editBtn.innerHTML = 'Edit'; 
+                editBtn.style.cursor = 'pointer';   
+              
+
+                tr.appendChild(h4El)
+                tr.appendChild(h3El)
+                tr.appendChild(h2El)
+                tr.appendChild(deleteBtn)
+                tr.appendChild(editBtn)
+
+                tb.appendChild(tr);
+                console.log(tb);
+
+                deleteBtn.onclick = function(){
+                    addedContacts.splice(i, 1)
+                    card();
+                }
+
+                editBtn.onclick = function(){
+                    nameInputEl.value = a.fname;
+                    lnameInputEl.value = a.lname;
+                    ageInputEl.value = a.age;
+                    btn.style.display = 'none';
+                    updatebtn.style.display = 'block';
+                    updatebtn.style.margin = '0 auto';
+                    index=i
+                   card();
+                }
+            })
+            }
+            function update(e){
+                e.preventDefault();
+                var contacts = {
+                fname : '',
+                lname : '',
+                age : ''
+             }
+               
+                contacts.fname = nameInputEl.value;
+                contacts.lname = lnameInputEl.value;
+                contacts.age = ageInputEl.value;
+                
+                addedContacts[index]=contacts
+                
+                btn.style.display = 'block';
+                updatebtn.style.display = 'none';
+                updatebtn.style.margin = '0 auto';
+                btn.style.margin = '0 auto';
+                
+                card();
+                
+                nameInputEl.value = ''
+                lnameInputEl.value = ''
+                ageInputEl.value = ''
+            }
+             
+        </script>
+    </body>
+</html>

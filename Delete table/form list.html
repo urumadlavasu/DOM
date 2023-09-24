@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>
+            
+        </title>
+    </head>
+
+    <body>
+        <form action="">
+
+            Name:<input type="text" id="d1">
+            
+            <button id="add1" onclick="lnames(event)">add</button>
+            <button id="update1" onclick="liupdate(event)">update</button>
+
+           
+        </form>
+         
+        <div>
+            <button onclick="sort1(event)" >A-Z</button>
+            <button onclick="sort2(event)" >Z-A</button>
+        </div>
+        <input type="text"  id="search" onkeyup="search()"/>
+        <button id="searchBtn"     >Search</button>
+
+        <ul id="d2">
+
+        </ul>
+
+        <script>
+            var searchInput = document.getElementById('search');
+             update1.style.display="none"
+            var studentname= document.getElementById("d1")
+            var index;
+             var students=[];
+
+            function lnames(e){
+               e.preventDefault();
+              
+               var ar={
+                name:"",
+               }
+               ar.name=document.getElementById("d1").value;
+               students.push(ar);
+               genUL(students);
+               console.log(students)
+               
+            }
+            function genUL(students){
+                document.getElementById("d2").innerHTML=""
+
+                students.forEach(function(a,i){
+                    var nli=document.createElement("li")
+                    nli.innerHTML=a.name;
+
+                    
+                    var deletebtn = document.createElement("button");
+                    deletebtn.innerHTML="delete";
+                    nli.appendChild(deletebtn)
+
+                    var editbtn = document.createElement("button")
+                    editbtn.innerHTML="edit";
+                    nli.appendChild(editbtn)
+
+                    document.getElementById("d2").appendChild(nli)
+
+                    deletebtn.onclick= function(){
+                        students.splice(i,1)
+                        genUL(students)
+                    }
+
+                    editbtn.onclick=function(){
+                        studentname.value=a.name
+                        index=i;
+
+                        add1.style.display="none"
+                        update1.style.display="block"
+                        genUL(students)
+                    }
+
+                    
+                    
+                })
+            }
+
+            function liupdate(c){
+                c.preventDefault();
+                var ar = {
+                    name:"",
+                }
+                ar.name=document.getElementById("d1").value
+                students[index]= ar
+                genUL(students)
+                document.getElementById("d1").value=""
+                add1.style.display="block"
+                update1.style.display="none"
+            }
+
+            function sort1(){
+                students.sort(function(a,b){
+                    if(a.name>b.name){
+                        return 1
+                    }
+                    if(a.name<b.name){
+                        return -1
+                    }
+                    return 0
+                })
+                genUL(students);
+            }
+            function search(){
+                var br = students.filter(function(x){
+                  return JSON.stringify(Object.values(x)).includes(searchInput.value)
+                })
+                genUL(br)
+            }
+                
+
+        </script>
+    </body>
+</html>

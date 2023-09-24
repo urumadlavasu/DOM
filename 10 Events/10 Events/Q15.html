@@ -1,0 +1,59 @@
+<html>
+    <head></head>
+    <body style="text-align: center">
+        <h1 style="color: red">Add Students</h1>
+        <input type="text" id="inp">
+        <button id="btn" onclick="add()">Add Student</button>
+         <ul id="ulEl">
+
+         </ul>
+       
+        <script>
+             var inputElement = document.getElementById('inp');
+             inputElement.style.padding = '5px';
+            
+             var btnElement = document.getElementById('btn');
+             btnElement.style.backgroundColor = 'orange';
+             btnElement.style.padding = '8px';
+             btnElement.style.border = 'none';
+             btnElement.style.marginLeft = '10px';
+             btnElement.style.borderRadius = '3px';
+
+             var students = [];
+             var ulElement = document.getElementById('ulEl');
+             ulElement.style.display = 'flex'
+             ulElement.style.flexDirection = 'column'
+             ulElement.style.alignItems = 'center'
+                
+              
+             function add(){
+                // ulElement.innerHTML = ''
+                var a = inputElement.value;
+                students.push(a);
+                // console.log(students)
+                addedList();
+                
+             }
+             function addedList(){
+                ulElement.innerHTML = ''
+              
+              
+                students.forEach(function(student){
+                var liEl = document.createElement('li');
+                ulElement.appendChild(liEl);  
+               
+                liEl.innerHTML = student;
+                liEl.style.color = 'red';
+                liEl.style.textAlign = 'left'; 
+                ulElement.style.padding ='0px';  
+                ulElement.style.textAlign = 'left'    
+                })
+             }
+
+             
+
+             
+
+        </script>
+    </body>
+</html>

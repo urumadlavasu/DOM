@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body style="text-align: center">
+           <label for="fname">first name:</label>
+           <input type="text" id="fname"/><br>
+           <p id="error">**The above field is mandatory</p>
+            
+            <label for="lname">last name:</label>
+            <input type="text" id="lname"><br>
+
+            <label for="mname">middle name:</label>
+            <input type="text" id="mname"/><br><br>
+
+            <button id="btn" onclick="update()">Update</button>
+        <script>
+              var error = document.getElementById('error');
+              error.style.margin = '0px';
+              function update(){
+                var fname = document.getElementById('fname');
+                if(fname === ''){
+                    error.style.display = 'block';
+                }else{
+                    error.style.display = 'none';
+                }
+              }
+        </script>
+    </body>
+</html>

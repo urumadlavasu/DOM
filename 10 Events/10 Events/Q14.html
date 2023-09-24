@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <div style="text-align: center">
+            <h1 style="color: red">Show images using URL</h1>
+            <label for="image" style="color: red;">Enter image URL:</label>
+            <input type="text" id="imageInput"/><br><br>
+            <button onclick="addImage()" style="background-color: orange; border: none; padding: 8px;margin-bottom: 10px">Add image</button>
+            <!-- <div id="container"> -->
+                <!-- <img id="getImage" src="" alt=""> -->
+            <!-- </div> -->
+        </div>
+
+        <script>
+            var inputElement = document.getElementById('imageInput');
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+           
+            var images = [];
+            
+            container.style.display = 'flex'
+            container.style.justifyContent = 'center'
+            container.style.alignItems = 'center';
+           
+            function addImage(){
+               var a = inputElement.value;
+               images.push(a);
+               console.log(images);
+               imageContainer()
+            }
+
+             function imageContainer(){
+            //    container.innerHTML = ''
+               var imageElement = document.createElement('img');
+               container.appendChild(imageElement);
+            
+               images.forEach(function(el){
+               imageElement.src = el;
+               imageElement.style.width = '200px';
+               imageElement.style.margin = '10px';
+            })
+         }
+            
+
+        </script>
+    </body>
+</html>

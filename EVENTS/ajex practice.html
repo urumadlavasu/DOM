@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>ajax p1</title>
+        <style>
+            #d1{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            #d1 li{
+                border: 2px solid grey;
+                padding: 10px;
+                margin: 20px;
+                width: 200px;
+                text-align: center;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="d1">
+             
+        </ul>
+        <script>
+            var countries =[];
+
+            fetch("https://restcountries.com/v3/all").then(function(res){
+                res.json().then(function(data){
+                    console.log(data);
+                    countries=data;
+                    genUI()
+                })
+            })
+
+            function genUI(){
+                countries.forEach(function(a){
+                    var nli = document.createElement("li");
+
+                    var nh2 = document.createElement("h2")
+                    nh2.innerHTML=a.name.common;
+                    nli.appendChild(nh2);
+
+                    var img = document.createElement("img");
+                    img.src=a.flags[0];
+                    nli.appendChild(img);
+                    img.style.width="100px";
+
+                    var ncapital = document.createElement("h3");
+                    ncapital.innerHTML= a.capital ? a.capital[0]: "No capital city";
+                    nli.appendChild(ncapital);
+
+                    var npopulation= document.createElement("h3");
+                    npopulation.innerHTML= a.population;
+                    nli.appendChild(npopulation);
+
+                   
+
+                document.getElementById("d1").appendChild(nli)
+                })
+               
+
+
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body style="text-align: center">
+        <input type="text" id="input"/><br><br>
+        <button id="btn" onclick="enable()">Enable the text box</button>
+
+
+        <script>
+            var inputElement = document.getElementById('input');
+            inputElement.disabled = true;
+            function enable(){
+                inputElement.disabled = false;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    <title>
+        arrayslevel1
+    </title>
+</head>
+
+<body>
+    <script>
+        // console.log("1Q.For the Given array: [23,34,54,0,4,7] print all the Array values using a for loop. Expected output: 23 34 54 0 4 71")
+            // var ar=[23, 34, 54, 0, 4, 7]
+        //     for(i = 0; i< ar.length; i++){
+        //         console.log(ar[i])
+        //         }
+
+            // ar.forEach(function(a,b,c){
+            //     console.log(a)
+            // });
+
+        //    console.log("2Q.print all numbers in an array except the first element. Expected output: 34 54 0 4 7")
+    //    var ar=[23,34,54,0,4,7]
+        //   for(let i=1;i<ar.length;i++)
+        //   console.log(ar[i])
+
+                    // ar.forEach(function(a,b,c){
+                    //     if(b>0){
+                    //         console.log(a)
+                    //     }
+                       
+                    // })
+
+        //   console.log("3Q.Print all elements in an array except the last element Expected output: 23 34 54 0 4")
+        //  var ar=[23,34,54,0,4,7]
+            //  for(let i=0;i<ar.length-1;i++)
+            //  console.log(ar[i])
+
+                //    ar.forEach(function(a,b,c){
+                //     if(b<ar.length-1){
+                //         console.log(a)
+                //     }
+                   
+            //    })
+        //  console.log("4Q.Print all the numbers from last index to first index Expected output: 7 4 0 54 34 23")
+        //  var ar=[23,34,54,0,4,7];
+            //  for(let i=ar.length-1;i>=0;i--)
+            //  console.log(ar[i])
+                    // var br=[];
+                    // ar.forEach(function(a,b,c){
+                    //    br.unshift(a)
+                    //     console.log(br)
+                    // })
+
+                //  ar.forEach(function(a,i,c){
+                //     var cr =ar.length-1-i;
+                //     br[cr]=ar[i]
+                    
+                //  })
+                //  console.log(br)
+
+        //    console.log("5Q.Print all the numbers from last index to first index except the first element Expected output: 4 0 54 34 23")
+        //    var ar=[23,34,54,0,4,7]
+        //    for(let i=ar.length-2;i>=0;i--)
+        //    console.log(ar[i])
+            // var br=[];
+            // ar.forEach(function(a,i){
+            //     var cr = ar.length-2-i;
+            //     br[cr] = ar[i];
+            // });
+            // console.log(br);
+        // console.log("6Q.Print all the numbers from last index to first index except the last element Expected output: 7 4 0 54 34")
+        // var ar=[23,34,54,0,4,7]
+        // for(let i=ar.length-1;i>=1;i--)
+        // console.log(ar[i])
+        // var br = [];
+        //  ar.forEach(function(a,i){
+        //     if(i>0){
+        //         var cr= ar.length-1-i;
+        //          br[cr] = ar[i];
+        //     }
+        //  })
+        //  console.log(br)
+             
+        //  console.log("7Q.Print only the last 4 elements of an array. Expected output: 54 0 4 7")
+        // var ar =[23,34,54,0,4,7]
+        // for(let i = 2;i<=ar.length-1;i++)
+        // console.log(ar[i])
+
+            // ar.forEach(function(a,i){
+            //     if(i>1){
+            //         console.log(a)
+            //     }
+            // })
+
+        //   console.log("8Q.For the Given array: [23,34,54,10,4,7] print values that are greater than the given number. Given number: 20, Expected output: 23,34,54")
+        //   var ar =[23,34,54,0,4,7]
+        //   for(let i = 0;i<=ar.length-1;i++){
+        //     if(ar[i]>20){
+        //         console.log(ar[i])
+        //     }
+        //   }
+            
+            // ar.forEach(function(a,i){
+            //     if(ar[i]>20){
+            //         console.log(a)
+            //     }
+            // })
+
+        // console.log("9Q.For the Given array: [23,34,54,10,4,7] print all the even numbers in an Array. Expected output: 34,54,10,4")
+            // var ar =[23,34,54,10,4,7]
+        //     for(var i = 0;i<=ar.length-1;i++){
+        //         if(ar[i]%2===0){
+        //             console.log(ar[i])
+        //         }
+        //     }
+                    // ar.forEach(function(a,i){
+                    //     if(ar[i]%2===0){
+                    //         console.log(a)
+                    //     }
+                    // })
+
+        // console.log("10Q.For the Given array: [23,34,54,10,4,7] print all the odd numbers in an Array. Expected output: 23,7")
+        // var ar = [23, 34, 54, 10, 4, 7]
+        // for (var i = 0; i <= ar.length - 1; i++){
+        //     if (ar[i] % 2 !== 0) {
+        //         console.log(ar[i])
+        //     }
+        // }
+        //  ar.forEach(function(a,i){
+        //     if(ar[i]%2!==0){
+        //         console.log(a)
+        //     }
+        //  })
+
+        // console.log("11Q.For the Given array: [23,-34,-54,10,-4,7] print all the positive numbers in an array. Expected output: 23,10,7")
+        // var ar = [23,-34,-54,10,-4,7]
+        // for(var i = 0; i<=ar.length-1;i++){
+        //     if(ar[i]>=0){
+        //         console.log(ar[i])
+        //     }
+        // }
+    
+                // ar.forEach(function(a,i){
+                //     if(ar[i]>=0){
+                //         console.log(a)
+                //     }
+                // })            
+        // console.log("12Q.Print only the 2 digit numbers from an array")
+        // var ar = [23,-34,-54,10,-4,7]
+        // for(var i = 0;i<=ar.length-1;i++){
+        //     if( (ar[i]>=10 && ar[i]<=99) || (ar[i]<=-10 && ar[i]>=-99) ){
+        //         console.log(ar[i])
+        //     }
+
+        // ar.forEach(function(a,i){
+        //             if(ar[i]>=10 && ar[i]<=99 || ar[i]<=-10 && ar[i]>=-99){
+        //                 console.log(a)
+        //             }
+        //         })        
+
+            // console.log("13Q.Print only multiples of 5 from an array")
+            // var ar=[23,-34,-54,10,-4,7]
+            // for(var i = 0; i<=ar.length-1;i++){
+            //     if(ar[i]%5===0){
+            //         console.log(ar[i])
+            //     }
+            // }
+            // ar.forEach(function(a,i){
+            //         if(ar[i]%5===0){
+            //             console.log(a)
+            //         }
+            //     })        
+         
+            // console.log("14Q.Print only multiples of 2 AND 3 from an array")
+            // var ar = [23,-34,-54,10,-4,7]
+            // for(var i = 0; i<=ar.length-1;i++){
+            //     if(ar[i]%2===0 && ar[i]%3===0){
+            //         console.log(ar[i])
+            //     }
+            // }
+            // ar.forEach(function(a,i){
+            //         if(ar[i]%2===0 && ar[i]%3===0){
+            //             console.log(a)
+            //         }
+            //     })        
+
+            // console.log("15Q.Print only multiples of 3 OR 5 from an array")
+            // var ar = [23,-34,-54,10,-4,7]
+            // for(var i = 0; i<=ar.length-1;i++){
+            //     if(ar[i]%3===0 || ar[i]%5===0){
+            //         console.log(ar[i])
+            //     }
+            // }
+                
+            // ar.forEach(function(a,i){
+            //     if(ar[i]%3===0 || ar[i]%5===0){
+            //         console.log(a)
+            //     }
+            // })
+        
+   
+
+            
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+       <style>
+          ul li{
+            border:1px solid;
+            padding:"10px";
+            margin:"5px";
+            list-style:none;
+          }
+          ul li::first-letter{
+            text-transform: uppercase;
+          }
+          .completed{
+            background-color: green;
+          }
+          .incomplete{
+            background-color: red;
+          }
+          
+       </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            function Todo(props){
+                return(
+                    <li class={props.k.status ? "completed":"incomplete" }>{props.k.title}
+                     <button onClick={()=>{props.delTodo(props.i)}}>Delete</button>
+                    </li>
+                )
+            }
+
+            function TodoList(){
+                var[todos,setTodos]=React.useState([
+                {
+                    title:"cleancar",
+                    status:true
+                },
+                {
+                    title:"getVeggies",
+                    status:false
+                },
+                {
+                    title:"buyfurniture",
+                    status:true
+                },
+                ]
+                    
+                )
+                function delTodo(index){
+                    var temp = [...todos];
+                    temp.splice(index,1);
+                    setTodos([...temp])
+                }
+                return(
+                    <div>
+                        <ul>{
+                            todos.map((k,i)=>{
+                                return <Todo k={k} delTodo={delTodo} i={i}></Todo>
+                            })
+                        }
+                        </ul>
+                    </div>
+                )
+
+            }
+            
+            ReactDOM.render(<TodoList/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

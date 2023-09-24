@@ -1,0 +1,32 @@
+.d-flex{
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.box{
+    width:150px;
+    height:150px;
+    border:1px solid black;
+}
+
+.first{
+    background-color: red;
+}
+
+.second{
+    background-color: blue;
+
+}
+.second{
+    background-color: yellow;
+
+}
+.second{
+    background-color:green;
+
+}
+.second{
+    background-color:pink;
+
+}

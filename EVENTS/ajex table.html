@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>ajex table</title>
+        <style>
+            /* table{
+                border: 1px solid black;
+            }
+            table  tr td{
+                border: 1px solid black;
+            } */
+            /* table th{
+                border: 1px solid black
+            } */
+        </style>
+    </head>
+    <body>
+        <button onclick="showtable()">createTable</button>
+        <table id="tb" border="1" cellpadding="2px" cellspacing="0px">
+                <th>country</th>
+                <th>capital</th>
+                <th>population</th>
+                <th>area</th>
+                <th>border</th>
+                <th>flag</th>
+           
+        </table>
+        <script>
+            var countries =[]
+        fetch("https://restcountries.com/v3/all").then(function(res){
+            res.json().then(function(data){
+                 console.log(data)
+                countries= data;
+            })
+        })
+
+            function showtable(){
+                countries.forEach(function(a){
+                    var ntr= document.createElement("tr")
+
+                    var ntd = document.createElement("td")
+                     ntd.innerHTML=a.name.common
+                     ntr.appendChild(ntd)
+
+                     var ctd = document.createElement("td")
+                     ctd.innerHTML=a.capital ? a.capital[0]:"no capital city";
+                     ntr.appendChild(ctd)
+
+                     var ptd = document.createElement("td")
+                     ptd.innerHTML=a.population
+                     ntr.appendChild(ptd)
+
+                     var atd = document.createElement("td")
+                     atd.innerHTML=a.area
+                     ntr.appendChild(atd)
+
+                     var btd = document.createElement("td")
+                     btd.innerHTML=a.borders
+                     ntr.appendChild(btd)
+
+                     var itd = document.createElement("td")
+                     var img = document.createElement("img")
+                     img.src=a.flags[0]
+                     img.style.width="100px"
+                     img.style.height="100px"
+                     itd.appendChild(img)
+                     ntr.appendChild(itd)
+                     
+
+                     document.getElementById("tb").appendChild(ntr)
+
+                     
+
+                })
+            }
+
+        </script>
+    </body>
+</html>

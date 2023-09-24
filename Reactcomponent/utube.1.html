@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            const TodoList = function (){
+                var [todos,setTodos]= React.useState(["vasu","bhargav"])
+                function addtodo(){
+                    var newtask = document.getElementById("d2").value
+                        setTodos([...todos,newtask])
+                }
+                return (
+                    <div>
+                        <h1>todolist</h1>
+                        <input type="text" id="d2"/>
+                        <button onClick={()=>{addtodo()}}>Addtodolist</button>
+                        <ul>
+                            {
+                                todos.map((a)=>{
+                                    return(
+                                        <li>{a}</li>
+                                    )
+                                })
+                            }</ul>
+
+                        </div>
+                )
+            }
+            ReactDOM.render(<TodoList/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

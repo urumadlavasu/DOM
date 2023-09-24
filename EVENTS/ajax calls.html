@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+            #countries{
+                display:flex;
+                flex-wrap: wrap ;
+                 justify-content: space-around; 
+            }
+            #countries li{
+                border: 2px solid grey ;
+                padding: 10px; 
+                margin: 10px; 
+                width: 200px;
+                text-align: center;
+                list-style: none;
+
+                        }
+        </style>
+    </head>
+    <body>
+
+        <ul id="countries">
+
+        </ul>
+        <script>
+        // fetch("https://restcountries.com/v3/all").then(function(res){
+        //     res.json().then(function(data){
+        //         console.log(data)
+        //     })
+        // })
+            var countries=[]
+        fetch("https://restcountries.com/v3/all").then(function(res){
+            res.json().then(function(data){
+                countries=data;
+                genUI();
+                
+            })
+        })
+
+        function genUI(){
+            console.log(countries)
+            countries.forEach(function(country){
+                var nli=document.createElement("li")
+               
+                var nh2=document.createElement("h2");
+                nh2.innerHTML=country.name.common;
+
+                var nimg=document.createElement("img");
+                nimg.src=country.flags[0]
+                nimg.style.width="100px"
+
+                var ncapital=document.createElement("h3");
+               ncapital.innerHTML=country.capital ? country.capital[0] : 'No capital City'
+
+                var npopulation=document.createElement("h3");
+                npopulation.innerHTML=country.population
+
+                nli.appendChild(nh2);
+                nli.appendChild(nimg);
+                nli.appendChild(ncapital);
+                nli.appendChild(npopulation);
+
+
+    
+        
+                
+                document.getElementById("countries").appendChild(nli)
+            })
+            
+        }
+
+        </script>
+    </body>
+</html>

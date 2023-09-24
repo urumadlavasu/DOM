@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center">
+             <button id="btn" onclick="toggle()">Toggle</button>
+             <span id="boolean" style="color: red; font-size: 18px">false</span>
+        </div>
+        
+
+        <script>
+            var btn = document.getElementById('btn');
+            var boolean = document.getElementById('boolean')
+            btn.style.backgroundColor = 'orange';
+            btn.style.marginRight = '10px';
+            btn.style.border = 'none';
+            btn.style.padding = '5px 10px';
+
+
+            function toggle(){
+               if(boolean.innerHTML === 'true'){
+                   boolean.innerHTML = 'false';
+               }else{
+                  boolean.innerHTML = 'true';
+               }
+            }
+        </script>
+    </body>
+</html>
